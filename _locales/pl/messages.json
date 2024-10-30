@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Gradientowe Łączenie Wydarzeń Google Calendar™",
+    "description": "Nazwa rozszerzenia łączącego zduplikowane wydarzenia kalendarza z gradientami."
+  },
+  "extensionDescription": {
+    "message": "Łączy zduplikowane wydarzenia Google Calendar w tęczę i koloruje weekendy",
+    "description": "Opis wyjaśniający główną funkcjonalność rozszerzenia."
+  }
+}

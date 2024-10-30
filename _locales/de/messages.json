@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Gradient-Zusammenführung für Google Calendar™ Ereignisse",
+    "description": "Name der Erweiterung, die doppelte Kalenderereignisse mit Farbverläufen zusammenführt."
+  },
+  "extensionDescription": {
+    "message": "Führt doppelte Google Calendar Ereignisse in einem Regenbogen zusammen und färbt die Wochenenden",
+    "description": "Beschreibung der Hauptfunktionalität der Erweiterung."
+  }
+}

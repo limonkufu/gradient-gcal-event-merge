@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "دمج متدرج لأحداث Google Calendar™",
+    "description": "اسم الإضافة التي تدمج أحداث التقويم المكررة مع التدرجات."
+  },
+  "extensionDescription": {
+    "message": "يدمج أحداث Google Calendar المكررة في قوس قزح ويلون عطلات نهاية الأسبوع",
+    "description": "وصف يشرح الوظيفة الرئيسية للإضافة."
+  }
+}

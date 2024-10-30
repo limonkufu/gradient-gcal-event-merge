@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Google Calendar™ イベントのグラデーションマージ",
+    "description": "グラデーションで重複カレンダーイベントをマージする拡張機能の名前。"
+  },
+  "extensionDescription": {
+    "message": "重複する Google Calendar のイベントを1つの虹色にマージし、週末に色を付けます",
+    "description": "拡張機能の主な機能を説明する説明文。"
+  }
+}

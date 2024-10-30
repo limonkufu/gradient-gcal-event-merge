@@ -1,10 +1,10 @@
 {
-  "appName": {
-    "message": "Gradiente Merge para Google Calendar™ Datos",
-    "description": "The title of the application, displayed in the web store."
+  "extensionName": {
+    "message": "Fusión Degradada para Eventos de Google Calendar™",
+    "description": "Nombre de la extensión que fusiona eventos duplicados del calendario con degradados."
   },
-  "appDesc": {
-    "message": "Extensión de Chrome que se funde visualmente el mismo evento en múltiples calendarios de Google en un solo evento.",
-    "description": "The description of the application, displayed in the web store."
+  "extensionDescription": {
+    "message": "Combina eventos duplicados de Google Calendar en un arcoíris y colorea los fines de semana",
+    "description": "Descripción que explica la funcionalidad principal de la extensión."
   }
 }

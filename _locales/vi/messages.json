@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Kết hợp Gradient cho Sự kiện Google Calendar™",
+    "description": "Tên tiện ích mở rộng kết hợp các sự kiện lịch trùng lặp với gradient."
+  },
+  "extensionDescription": {
+    "message": "Kết hợp các sự kiện trùng lặp của Google Calendar thành cầu vồng và tô màu các ngày cuối tuần",
+    "description": "Mô tả giải thích chức năng chính của tiện ích mở rộng."
+  }
+}

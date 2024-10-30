@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Fusione Gradiente per Eventi di Google Calendar™",
+    "description": "Nome dell'estensione che unisce eventi duplicati del calendario con gradienti."
+  },
+  "extensionDescription": {
+    "message": "Unisce eventi duplicati di Google Calendar in un arcobaleno e colora i fine settimana",
+    "description": "Descrizione che spiega la funzionalità principale dell'estensione."
+  }
+}

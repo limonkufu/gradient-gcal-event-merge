@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Gradiënt Samenvoegen voor Google Calendar™ Gebeurtenissen",
+    "description": "Naam van de extensie die dubbele agenda-gebeurtenissen samenvoegt met gradiënten."
+  },
+  "extensionDescription": {
+    "message": "Voegt dubbele Google Calendar gebeurtenissen samen in een regenboog en kleurt de weekenden",
+    "description": "Beschrijving die de hoofdfunctionaliteit van de extensie uitlegt."
+  }
+}

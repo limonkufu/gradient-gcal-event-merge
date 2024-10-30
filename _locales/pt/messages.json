@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Mesclagem Gradiente para Eventos do Google Calendar™",
+    "description": "Nome da extensão que mescla eventos duplicados do calendário com gradientes."
+  },
+  "extensionDescription": {
+    "message": "Mescla eventos duplicados do Google Calendar em um arco-íris e colore os fins de semana",
+    "description": "Descrição explicando a funcionalidade principal da extensão."
+  }
+}

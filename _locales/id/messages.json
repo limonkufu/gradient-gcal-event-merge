@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Penggabungan Gradien untuk Acara Google Calendar™",
+    "description": "Nama ekstensi yang menggabungkan acara kalender duplikat dengan gradien."
+  },
+  "extensionDescription": {
+    "message": "Menggabungkan acara Google Calendar yang duplikat menjadi pelangi dan mewarnai akhir pekan",
+    "description": "Deskripsi yang menjelaskan fungsi utama ekstensi."
+  }
+}

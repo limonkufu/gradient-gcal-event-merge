@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Google Calendar™ 事件渐变合并",
+    "description": "合并具有渐变效果的重复日历事件的扩展名称。"
+  },
+  "extensionDescription": {
+    "message": "将重复的 Google Calendar 事件合并为彩虹效果并为周末着色",
+    "description": "解释扩展主要功能的描述。"
+  }
+}
