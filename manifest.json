@@ -24,7 +24,11 @@
     "scripts": ["background.js"]
   },
   "action": {
-    "default_title": "Toggle"
+    "default_popup": "popup.html",
+    "default_title": "Calendar Gradient Settings",
+    "default_icon": {
+      "48": "icon.png"
+    }
   },
   "icons": {
     "48": "icon.png"

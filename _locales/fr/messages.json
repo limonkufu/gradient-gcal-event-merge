@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "Fusionne les événements Google Calendar en double dans un arc-en-ciel et colore les week-ends",
     "description": "Description expliquant la fonctionnalité principale de l'extension."
+  },
+  "popupEnableExtension": {
+    "message": "Activer l'Extension",
+    "description": "Étiquette pour l'interrupteur d'activation/désactivation de l'extension"
+  },
+  "popupGradientOpacity": {
+    "message": "Opacité du Dégradé",
+    "description": "Étiquette pour le curseur d'opacité du dégradé"
   }
 }

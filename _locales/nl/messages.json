@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "Voegt dubbele Google Calendar gebeurtenissen samen in een regenboog en kleurt de weekenden",
     "description": "Beschrijving die de hoofdfunctionaliteit van de extensie uitlegt."
+  },
+  "popupEnableExtension": {
+    "message": "Extensie Inschakelen",
+    "description": "Label voor de extensie aan/uit-schakelaar"
+  },
+  "popupGradientOpacity": {
+    "message": "Gradiënt Transparantie",
+    "description": "Label voor de gradiënt transparantie schuifregelaar"
   }
 }

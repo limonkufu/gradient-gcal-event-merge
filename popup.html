@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar Gradient Settings</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .setting-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    input[type="range"] {
+      flex: 1;
+    }
+    .value {
+      min-width: 40px;
+      text-align: right;
+    }
+    html[dir="rtl"] .value {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="toggle-row">
+      <label>
+        <input type="checkbox" id="enableExtension" />
+        <span id="enableText"></span>
+      </label>
+    </div>
+    <div class="setting-row">
+      <label for="gradientOpacity" id="opacityLabel"></label>
+      <div class="slider-container">
+        <input type="range" id="gradientOpacity" min="0" max="1" step="0.05" />
+        <span id="opacityValue" class="value"></span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

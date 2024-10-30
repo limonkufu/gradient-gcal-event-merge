@@ -23,7 +23,23 @@ const CONSTANTS = {
     MINI_CALENDAR: "div[data-month], div[data-ical]"
   },
   STYLES: {
-    GRADIENT_OPACITY: 0.75,
+    DEFAULT_GRADIENT_OPACITY: 0.75, // Default value if user hasn't set one
+  }
+};
+
+// Add configuration management
+const config = {
+  settings: {
+    gradientOpacity: CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY
+  },
+
+  loadSettings: () => {
+    return new Promise((resolve) => {
+      chrome.storage.sync.get(['gradientOpacity'], (result) => {
+        config.settings.gradientOpacity = result.gradientOpacity || CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY;
+        resolve();
+      });
+    });
   }
 };
 
@@ -31,7 +47,7 @@ const CONSTANTS = {
 const utils = {
   stripesGradient: (colors, width, angle) => {
     const colorStrings = colors.map(color => 
-      color.toString().replace(')', `, ${CONSTANTS.STYLES.GRADIENT_OPACITY})`).replace('rgb', 'rgba')
+      color.toString().replace(')', `, ${config.settings.gradientOpacity})`).replace('rgb', 'rgba')
     );
     return `linear-gradient(${angle}deg,${colorStrings.join(',')})`;
   },
@@ -201,15 +217,23 @@ const observerSetup = {
 };
 
 // Initialize application
-const init = () => {
-  setTimeout(() => {
-    chrome.storage.local.get('disabled', storage => {
+const init = async () => {
+  setTimeout(async () => {
+    chrome.storage.local.get('disabled', async storage => {
       if (!storage.disabled) {
+        await config.loadSettings();
         const { mainObserver, miniObserver } = observerSetup.initializeObservers();
         mainObserver.observe(document.body, { childList: true, subtree: true, attributes: true });
         miniObserver.observe(document.body, { childList: true, subtree: true, attributes: true });
       }
-      chrome.storage.onChanged.addListener(() => window.location.reload());
+      
+      // Reload when settings change
+      chrome.storage.onChanged.addListener((changes) => {
+        if (changes.gradientOpacity) {
+          config.settings.gradientOpacity = changes.gradientOpacity.newValue;
+        }
+        window.location.reload();
+      });
     });
   }, 10);
 };

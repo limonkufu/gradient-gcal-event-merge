@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "Łączy zduplikowane wydarzenia Google Calendar w tęczę i koloruje weekendy",
     "description": "Opis wyjaśniający główną funkcjonalność rozszerzenia."
+  },
+  "popupEnableExtension": {
+    "message": "Włącz Rozszerzenie",
+    "description": "Etykieta dla przełącznika włączania/wyłączania rozszerzenia"
+  },
+  "popupGradientOpacity": {
+    "message": "Przezroczystość Gradientu",
+    "description": "Etykieta dla suwaka przezroczystości gradientu"
   }
 }

@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "Merges duplicate Google Calendar events into one rainbow and colors the weekends.",
     "description": "Description explaining the extension's main functionality."
+  },
+  "popupEnableExtension": {
+    "message": "Enable Extension",
+    "description": "Label for the extension enable/disable toggle switch"
+  },
+  "popupGradientOpacity": {
+    "message": "Gradient Opacity",
+    "description": "Label for the gradient opacity slider"
   }
 }

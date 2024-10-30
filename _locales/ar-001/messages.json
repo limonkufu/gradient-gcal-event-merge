@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "يدمج أحداث Google Calendar المكررة في قوس قزح ويلون عطلات نهاية الأسبوع",
     "description": "وصف يشرح الوظيفة الرئيسية للإضافة."
+  },
+  "popupEnableExtension": {
+    "message": "تمكين الإضافة",
+    "description": "تسمية لمفتاح تشغيل/إيقاف الإضافة"
+  },
+  "popupGradientOpacity": {
+    "message": "شفافية التدرج",
+    "description": "تسمية لشريط تمرير شفافية التدرج"
   }
 }

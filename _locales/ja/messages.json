@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "重複する Google Calendar のイベントを1つの虹色にマージし、週末に色を付けます",
     "description": "拡張機能の主な機能を説明する説明文。"
+  },
+  "popupEnableExtension": {
+    "message": "拡張機能を有効にする",
+    "description": "拡張機能の有効/無効を切り替えるスイッチのラベル"
+  },
+  "popupGradientOpacity": {
+    "message": "グラデーションの不透明度",
+    "description": "グラデーションの不透明度スライダーのラベル"
   }
 }

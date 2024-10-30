@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "डुप्लिकेट Google Calendar इवेंट्स को एक इंद्रधनुष में मिलाता है और सप्ताहांत को रंगता है",
     "description": "एक्सटेंशन की मुख्य कार्यक्षमता की व्याख्या करने वाला विवरण।"
+  },
+  "popupEnableExtension": {
+    "message": "एक्सटेंशन सक्षम करें",
+    "description": "एक्सटेंशन सक्षम/अक्षम टॉगल स्विच के लिए लेबल"
+  },
+  "popupGradientOpacity": {
+    "message": "ग्रेडिएंट अपारदर्शिता",
+    "description": "ग्रेडिएंट अपारदर्शिता स्लाइडर के लिए लेबल"
   }
 }

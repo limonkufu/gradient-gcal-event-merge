@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "Unisce eventi duplicati di Google Calendar in un arcobaleno e colora i fine settimana",
     "description": "Descrizione che spiega la funzionalità principale dell'estensione."
+  },
+  "popupEnableExtension": {
+    "message": "Attiva Estensione",
+    "description": "Etichetta per l'interruttore di attivazione/disattivazione dell'estensione"
+  },
+  "popupGradientOpacity": {
+    "message": "Opacità del Gradiente",
+    "description": "Etichetta per il cursore dell'opacità del gradiente"
   }
 }

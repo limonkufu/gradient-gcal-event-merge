@@ -4,11 +4,3 @@ const setIcon = (disabled) => chrome.action.setIcon({
 });
 
 getSetting().then(setIcon);
-
-chrome.action.onClicked.addListener(function(tab) {
-  getSetting().then(disabled => {
-    const toggled = !disabled;
-    chrome.storage.local.set({ 'disabled': toggled });
-    setIcon(toggled);
-  })
-});

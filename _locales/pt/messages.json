@@ -6,5 +6,13 @@
   "extensionDescription": {
     "message": "Mescla eventos duplicados do Google Calendar em um arco-íris e colore os fins de semana",
     "description": "Descrição explicando a funcionalidade principal da extensão."
+  },
+  "popupEnableExtension": {
+    "message": "Ativar Extensão",
+    "description": "Rótulo para o interruptor de ativar/desativar a extensão"
+  },
+  "popupGradientOpacity": {
+    "message": "Opacidade do Gradiente",
+    "description": "Rótulo para o controle deslizante de opacidade do gradiente"
   }
 }
