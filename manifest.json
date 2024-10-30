@@ -1,21 +1,21 @@
 {
-
-  "name": "__MSG_appName__",
+  "manifest_version": 3,
   "short_name": "Gradient Merge",
-  "description": "__MSG_appDesc__",
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
   "default_locale": "en",
-  "version": "1.0.3",
-      "content_scripts":[{
-        "matches": [
-            "https://www.google.com/calendar/*",
-            "https://calendar.google.com/calendar/*"
-        ],
-        "js": [ "events.user.js" ],
-        "run_at": "document_end"
-    }],
-  "permissions": [
-    "storage"
+  "version": "1.1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/calendar/*",
+        "https://calendar.google.com/calendar/*"
+      ],
+      "js": ["events.user.js"],
+      "run_at": "document_end"
+    }
   ],
+  "permissions": ["storage"],
   "host_permissions": [
     "https://www.google.com/calendar/*",
     "https://calendar.google.com/*"
@@ -34,6 +34,5 @@
       "id": "gcal-multical-event-merge@limonkufu.com",
       "strict_min_version": "109.0"
     }
-  },
-  "manifest_version": 3
+  }
 }
