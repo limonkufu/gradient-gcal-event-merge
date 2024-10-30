@@ -30,13 +30,15 @@ const CONSTANTS = {
 // Add configuration management
 const config = {
   settings: {
-    gradientOpacity: CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY
+    gradientOpacity: CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY,
+    weekendsEnabled: true
   },
 
   loadSettings: () => {
     return new Promise((resolve) => {
-      chrome.storage.sync.get(['gradientOpacity'], (result) => {
+      chrome.storage.sync.get(['gradientOpacity', 'weekendsEnabled'], (result) => {
         config.settings.gradientOpacity = result.gradientOpacity || CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY;
+        config.settings.weekendsEnabled = result.weekendsEnabled !== false;
         resolve();
       });
     });
@@ -201,11 +203,15 @@ const observerSetup = {
         .filter(node => node.matches && node.matches(CONSTANTS.SELECTORS.MAIN_CALENDAR))
         .forEach(node => {
           eventHandlers.merge(node);
-          weekendHandlers.colorWeekends(node);
+          if (config.settings.weekendsEnabled) {
+            weekendHandlers.colorWeekends(node);
+          }
         });
     });
 
     const miniObserver = new MutationObserver((mutations) => {
+      if (!config.settings.weekendsEnabled) return;
+      
       mutations
         .map(mutation => mutation.addedNodes[0] || mutation.target)
         .filter(node => node.matches && node.matches(CONSTANTS.SELECTORS.MINI_CALENDAR))

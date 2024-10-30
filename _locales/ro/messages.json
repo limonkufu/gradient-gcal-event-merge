@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Fuziune Gradientă pentru Evenimente Google Calendar™",
-    "description": "Numele extensiei care combină evenimente duplicate din calendar cu gradiente."
-  },
-  "extensionDescription": {
-    "message": "Combină evenimentele duplicate din Google Calendar într-un curcubeu și colorează weekendurile",
-    "description": "Descriere care explică funcționalitatea principală a extensiei."
-  },
-  "popupEnableExtension": {
-    "message": "Activare Extensie",
-    "description": "Etichetă pentru comutatorul de activare/dezactivare a extensiei"
-  },
   "popupGradientOpacity": {
     "message": "Opacitate Gradient",
     "description": "Etichetă pentru glisorul de opacitate al gradientului"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Colorează Weekendurile",
+    "description": "Etichetă pentru comutatorul de colorare a weekendurilor"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Activare Extensie",
+    "description": "Etichetă pentru comutatorul de activare/dezactivare a extensiei"
+  }
+,
+  "extensionName": {
+    "message": "Fuziune Gradientă pentru Evenimente Google Calendar™",
+    "description": "Numele extensiei care combină evenimente duplicate din calendar cu gradiente."
+  }
+,
+  "extensionDescription": {
+    "message": "Combină evenimentele duplicate din Google Calendar într-un curcubeu și colorează weekendurile",
+    "description": "Descriere care explică funcționalitatea principală a extensiei."
+  }
+
 }

@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Google Calendar™ Etkinlikleri için Gradyan Birleştirme",
-    "description": "Yinelenen takvim etkinliklerini gradyanlarla birleştiren uzantının adı."
-  },
-  "extensionDescription": {
-    "message": "Yinelenen Google Calendar etkinliklerini gökkuşağına dönüştürür ve haftasonlarını renklendirir",
-    "description": "Uzantının ana işlevini açıklayan açıklama."
-  },
-  "popupEnableExtension": {
-    "message": "Uzantıyı Etkinleştir",
-    "description": "Uzantı etkinleştirme/devre dışı bırakma düğmesi için etiket"
-  },
   "popupGradientOpacity": {
     "message": "Gradyan Opaklığı",
     "description": "Gradyan opaklık kaydırıcısı için etiket"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Haftasonlarını Renklendir",
+    "description": "Haftasonu renklendirme düğmesi için etiket"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Uzantıyı Etkinleştir",
+    "description": "Uzantı etkinleştirme/devre dışı bırakma düğmesi için etiket"
+  }
+,
+  "extensionName": {
+    "message": "Google Calendar™ Etkinlikleri için Gradyan Birleştirme",
+    "description": "Yinelenen takvim etkinliklerini gradyanlarla birleştiren uzantının adı."
+  }
+,
+  "extensionDescription": {
+    "message": "Yinelenen Google Calendar etkinliklerini gökkuşağına dönüştürür ve haftasonlarını renklendirir",
+    "description": "Uzantının ana işlevini açıklayan açıklama."
+  }
+
 }

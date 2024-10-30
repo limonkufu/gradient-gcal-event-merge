@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Gradientowe Łączenie Wydarzeń Google Calendar™",
-    "description": "Nazwa rozszerzenia łączącego zduplikowane wydarzenia kalendarza z gradientami."
-  },
-  "extensionDescription": {
-    "message": "Łączy zduplikowane wydarzenia Google Calendar w tęczę i koloruje weekendy",
-    "description": "Opis wyjaśniający główną funkcjonalność rozszerzenia."
-  },
-  "popupEnableExtension": {
-    "message": "Włącz Rozszerzenie",
-    "description": "Etykieta dla przełącznika włączania/wyłączania rozszerzenia"
-  },
   "popupGradientOpacity": {
     "message": "Przezroczystość Gradientu",
     "description": "Etykieta dla suwaka przezroczystości gradientu"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Koloruj Weekendy",
+    "description": "Etykieta dla przełącznika kolorowania weekendów"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Włącz Rozszerzenie",
+    "description": "Etykieta dla przełącznika włączania/wyłączania rozszerzenia"
+  }
+,
+  "extensionName": {
+    "message": "Gradientowe Łączenie Wydarzeń Google Calendar™",
+    "description": "Nazwa rozszerzenia łączącego zduplikowane wydarzenia kalendarza z gradientami."
+  }
+,
+  "extensionDescription": {
+    "message": "Łączy zduplikowane wydarzenia Google Calendar w tęczę i koloruje weekendy",
+    "description": "Opis wyjaśniający główną funkcjonalność rozszerzenia."
+  }
+
 }

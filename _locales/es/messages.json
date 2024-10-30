@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Fusión Degradada para Eventos de Google Calendar™",
-    "description": "Nombre de la extensión que fusiona eventos duplicados del calendario con degradados."
-  },
-  "extensionDescription": {
-    "message": "Combina eventos duplicados de Google Calendar en un arcoíris y colorea los fines de semana",
-    "description": "Descripción que explica la funcionalidad principal de la extensión."
-  },
-  "popupEnableExtension": {
-    "message": "Activar Extensión",
-    "description": "Etiqueta para el interruptor de activar/desactivar la extensión"
-  },
   "popupGradientOpacity": {
     "message": "Opacidad del Degradado",
     "description": "Etiqueta para el control deslizante de opacidad del degradado"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Colorear Fines de Semana",
+    "description": "Etiqueta para el interruptor de colorear fines de semana"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Activar Extensión",
+    "description": "Etiqueta para el interruptor de activar/desactivar la extensión"
+  }
+,
+  "extensionName": {
+    "message": "Fusión Degradada para Eventos de Google Calendar™",
+    "description": "Nombre de la extensión que fusiona eventos duplicados del calendario con degradados."
+  }
+,
+  "extensionDescription": {
+    "message": "Combina eventos duplicados de Google Calendar en un arcoíris y colorea los fines de semana",
+    "description": "Descripción que explica la funcionalidad principal de la extensión."
+  }
+
 }

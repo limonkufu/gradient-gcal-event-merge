@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Kết hợp Gradient cho Sự kiện Google Calendar™",
-    "description": "Tên tiện ích mở rộng kết hợp các sự kiện lịch trùng lặp với gradient."
-  },
-  "extensionDescription": {
-    "message": "Kết hợp các sự kiện trùng lặp của Google Calendar thành cầu vồng và tô màu các ngày cuối tuần",
-    "description": "Mô tả giải thích chức năng chính của tiện ích mở rộng."
-  },
-  "popupEnableExtension": {
-    "message": "Bật Tiện Ích Mở Rộng",
-    "description": "Nhãn cho công tắc bật/tắt tiện ích mở rộng"
-  },
   "popupGradientOpacity": {
     "message": "Độ Mờ Gradient",
     "description": "Nhãn cho thanh trượt độ mờ gradient"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Tô Màu Cuối Tuần",
+    "description": "Nhãn cho công tắc tô màu cuối tuần"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Bật Tiện Ích Mở Rộng",
+    "description": "Nhãn cho công tắc bật/tắt tiện ích mở rộng"
+  }
+,
+  "extensionName": {
+    "message": "Kết hợp Gradient cho Sự kiện Google Calendar™",
+    "description": "Tên tiện ích mở rộng kết hợp các sự kiện lịch trùng lặp với gradient."
+  }
+,
+  "extensionDescription": {
+    "message": "Kết hợp các sự kiện trùng lặp của Google Calendar thành cầu vồng và tô màu các ngày cuối tuần",
+    "description": "Mô tả giải thích chức năng chính của tiện ích mở rộng."
+  }
+
 }

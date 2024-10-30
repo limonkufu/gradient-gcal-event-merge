@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Google Calendar™ 事件渐变合并",
-    "description": "合并具有渐变效果的重复日历事件的扩展名称。"
-  },
-  "extensionDescription": {
-    "message": "将重复的 Google Calendar 事件合并为彩虹效果并为周末着色",
-    "description": "解释扩展主要功能的描述。"
-  },
-  "popupEnableExtension": {
-    "message": "启用扩展",
-    "description": "扩展启用/禁用开关的标签"
-  },
   "popupGradientOpacity": {
     "message": "渐变不透明度",
     "description": "渐变不透明度滑块的标签"
   }
+,
+  "popupEnableWeekends": {
+    "message": "为周末着色",
+    "description": "周末着色开关的标签"
+  }
+,
+  "popupEnableExtension": {
+    "message": "启用扩展",
+    "description": "扩展启用/禁用开关的标签"
+  }
+,
+  "extensionName": {
+    "message": "Google Calendar™ 事件渐变合并",
+    "description": "合并具有渐变效果的重复日历事件的扩展名称。"
+  }
+,
+  "extensionDescription": {
+    "message": "将重复的 Google Calendar 事件合并为彩虹效果并为周末着色",
+    "description": "解释扩展主要功能的描述。"
+  }
+
 }

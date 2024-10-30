@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Gradient Merge for Google Calendar™ Events",
-    "description": "Name of the extension that merges duplicate calendar events with gradients."
-  },
-  "extensionDescription": {
-    "message": "Merges duplicate Google Calendar events into one rainbow and colors the weekends.",
-    "description": "Description explaining the extension's main functionality."
-  },
-  "popupEnableExtension": {
-    "message": "Enable Extension",
-    "description": "Label for the extension enable/disable toggle switch"
-  },
   "popupGradientOpacity": {
     "message": "Gradient Opacity",
     "description": "Label for the gradient opacity slider"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Color Weekends",
+    "description": "Label for the weekend coloring toggle switch"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Enable Extension",
+    "description": "Label for the extension enable/disable toggle switch"
+  }
+,
+  "extensionName": {
+    "message": "Gradient Merge for Google Calendar™ Events",
+    "description": "Name of the extension that merges duplicate calendar events with gradients."
+  }
+,
+  "extensionDescription": {
+    "message": "Merges duplicate Google Calendar events into one rainbow and colors the weekends.",
+    "description": "Description explaining the extension's main functionality."
+  }
+
 }

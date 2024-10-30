@@ -38,6 +38,10 @@
     html[dir="rtl"] .value {
       text-align: left;
     }
+    .divider {
+      border-top: 1px solid #ccc;
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
@@ -46,6 +50,13 @@
       <label>
         <input type="checkbox" id="enableExtension" />
         <span id="enableText"></span>
+      </label>
+    </div>
+    <div class="divider"></div>
+    <div class="toggle-row">
+      <label>
+        <input type="checkbox" id="enableWeekends" />
+        <span id="weekendsText"></span>
       </label>
     </div>
     <div class="setting-row">

@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "การผสานแบบไล่ระดับสำหรับกิจกรรม Google Calendar™",
-    "description": "ชื่อส่วนขยายที่ผสานกิจกรรมปฏิทินที่ซ้ำซ้อนด้วยการไล่ระดับ"
-  },
-  "extensionDescription": {
-    "message": "ผสานกิจกรรม Google Calendar ที่ซ้ำซ้อนให้เป็นสีรุ้งและระบายสีวันสุดสัปดาห์",
-    "description": "คำอธิบายที่อธิบายฟังก์ชันหลักของส่วนขยาย"
-  },
-  "popupEnableExtension": {
-    "message": "เปิดใช้งานส่วนขยาย",
-    "description": "ป้ายกำกับสำหรับสวิตช์เปิด/ปิดส่วนขยาย"
-  },
   "popupGradientOpacity": {
     "message": "ความทึบของการไล่ระดับ",
     "description": "ป้ายกำกับสำหรับตัวเลื่อนความทึบของการไล่ระดับ"
   }
+,
+  "popupEnableWeekends": {
+    "message": "ระบายสีวันสุดสัปดาห์",
+    "description": "ป้ายกำกับสำหรับสวิตช์ระบายสีวันสุดสัปดาห์"
+  }
+,
+  "popupEnableExtension": {
+    "message": "เปิดใช้งานส่วนขยาย",
+    "description": "ป้ายกำกับสำหรับสวิตช์เปิด/ปิดส่วนขยาย"
+  }
+,
+  "extensionName": {
+    "message": "การผสานแบบไล่ระดับสำหรับกิจกรรม Google Calendar™",
+    "description": "ชื่อส่วนขยายที่ผสานกิจกรรมปฏิทินที่ซ้ำซ้อนด้วยการไล่ระดับ"
+  }
+,
+  "extensionDescription": {
+    "message": "ผสานกิจกรรม Google Calendar ที่ซ้ำซ้อนให้เป็นสีรุ้งและระบายสีวันสุดสัปดาห์",
+    "description": "คำอธิบายที่อธิบายฟังก์ชันหลักของส่วนขยาย"
+  }
+
 }

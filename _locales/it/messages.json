@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Fusione Gradiente per Eventi di Google Calendar™",
-    "description": "Nome dell'estensione che unisce eventi duplicati del calendario con gradienti."
-  },
-  "extensionDescription": {
-    "message": "Unisce eventi duplicati di Google Calendar in un arcobaleno e colora i fine settimana",
-    "description": "Descrizione che spiega la funzionalità principale dell'estensione."
-  },
-  "popupEnableExtension": {
-    "message": "Attiva Estensione",
-    "description": "Etichetta per l'interruttore di attivazione/disattivazione dell'estensione"
-  },
   "popupGradientOpacity": {
     "message": "Opacità del Gradiente",
     "description": "Etichetta per il cursore dell'opacità del gradiente"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Colora Fine Settimana",
+    "description": "Etichetta per l'interruttore di colorazione dei fine settimana"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Attiva Estensione",
+    "description": "Etichetta per l'interruttore di attivazione/disattivazione dell'estensione"
+  }
+,
+  "extensionName": {
+    "message": "Fusione Gradiente per Eventi di Google Calendar™",
+    "description": "Nome dell'estensione che unisce eventi duplicati del calendario con gradienti."
+  }
+,
+  "extensionDescription": {
+    "message": "Unisce eventi duplicati di Google Calendar in un arcobaleno e colora i fine settimana",
+    "description": "Descrizione che spiega la funzionalità principale dell'estensione."
+  }
+
 }

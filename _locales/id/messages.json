@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Penggabungan Gradien untuk Acara Google Calendar™",
-    "description": "Nama ekstensi yang menggabungkan acara kalender duplikat dengan gradien."
-  },
-  "extensionDescription": {
-    "message": "Menggabungkan acara Google Calendar yang duplikat menjadi pelangi dan mewarnai akhir pekan",
-    "description": "Deskripsi yang menjelaskan fungsi utama ekstensi."
-  },
-  "popupEnableExtension": {
-    "message": "Aktifkan Ekstensi",
-    "description": "Label untuk tombol aktif/nonaktif ekstensi"
-  },
   "popupGradientOpacity": {
     "message": "Kegelapan Gradien",
     "description": "Label untuk penggeser kegelapan gradien"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Warnai Akhir Pekan",
+    "description": "Label untuk tombol pewarnaan akhir pekan"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Aktifkan Ekstensi",
+    "description": "Label untuk tombol aktif/nonaktif ekstensi"
+  }
+,
+  "extensionName": {
+    "message": "Penggabungan Gradien untuk Acara Google Calendar™",
+    "description": "Nama ekstensi yang menggabungkan acara kalender duplikat dengan gradien."
+  }
+,
+  "extensionDescription": {
+    "message": "Menggabungkan acara Google Calendar yang duplikat menjadi pelangi dan mewarnai akhir pekan",
+    "description": "Deskripsi yang menjelaskan fungsi utama ekstensi."
+  }
+
 }

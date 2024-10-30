@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "Fusion en dégradé pour événements Google Calendar™",
-    "description": "Nom de l'extension qui fusionne les événements en double du calendrier avec des dégradés."
-  },
-  "extensionDescription": {
-    "message": "Fusionne les événements Google Calendar en double dans un arc-en-ciel et colore les week-ends",
-    "description": "Description expliquant la fonctionnalité principale de l'extension."
-  },
-  "popupEnableExtension": {
-    "message": "Activer l'Extension",
-    "description": "Étiquette pour l'interrupteur d'activation/désactivation de l'extension"
-  },
   "popupGradientOpacity": {
     "message": "Opacité du Dégradé",
     "description": "Étiquette pour le curseur d'opacité du dégradé"
   }
+,
+  "popupEnableWeekends": {
+    "message": "Colorer les Week-ends",
+    "description": "Étiquette pour l'interrupteur de coloration des week-ends"
+  }
+,
+  "popupEnableExtension": {
+    "message": "Activer l'Extension",
+    "description": "Étiquette pour l'interrupteur d'activation/désactivation de l'extension"
+  }
+,
+  "extensionName": {
+    "message": "Fusion en dégradé pour événements Google Calendar™",
+    "description": "Nom de l'extension qui fusionne les événements en double du calendrier avec des dégradés."
+  }
+,
+  "extensionDescription": {
+    "message": "Fusionne les événements Google Calendar en double dans un arc-en-ciel et colore les week-ends",
+    "description": "Description expliquant la fonctionnalité principale de l'extension."
+  }
+
 }

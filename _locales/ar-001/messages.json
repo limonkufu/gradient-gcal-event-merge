@@ -1,18 +1,27 @@
 {
-  "extensionName": {
-    "message": "دمج متدرج لأحداث Google Calendar™",
-    "description": "اسم الإضافة التي تدمج أحداث التقويم المكررة مع التدرجات."
-  },
-  "extensionDescription": {
-    "message": "يدمج أحداث Google Calendar المكررة في قوس قزح ويلون عطلات نهاية الأسبوع",
-    "description": "وصف يشرح الوظيفة الرئيسية للإضافة."
-  },
-  "popupEnableExtension": {
-    "message": "تمكين الإضافة",
-    "description": "تسمية لمفتاح تشغيل/إيقاف الإضافة"
-  },
   "popupGradientOpacity": {
     "message": "شفافية التدرج",
     "description": "تسمية لشريط تمرير شفافية التدرج"
   }
+,
+  "popupEnableWeekends": {
+    "message": "تلوين عطلات نهاية الأسبوع",
+    "description": "تسمية لمفتاح تلوين عطلات نهاية الأسبوع"
+  }
+,
+  "popupEnableExtension": {
+    "message": "تمكين الإضافة",
+    "description": "تسمية لمفتاح تشغيل/إيقاف الإضافة"
+  }
+,
+  "extensionName": {
+    "message": "دمج متدرج لأحداث Google Calendar™",
+    "description": "اسم الإضافة التي تدمج أحداث التقويم المكررة مع التدرجات."
+  }
+,
+  "extensionDescription": {
+    "message": "يدمج أحداث Google Calendar المكررة في قوس قزح ويلون عطلات نهاية الأسبوع",
+    "description": "وصف يشرح الوظيفة الرئيسية للإضافة."
+  }
+
 }
