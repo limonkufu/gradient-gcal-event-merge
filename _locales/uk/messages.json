@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Колір вихідних (Світла)",
+    "description": "Колір вихідних для світлої теми"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Непрозорість Градієнта",
-    "description": "Мітка для повзунка непрозорості градієнта"
+    "message": "Прозорість",
+    "description": "Налаштування прозорості"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Базовий темний",
+    "description": "Стандартний колір для темної теми"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Системна",
+    "description": "Використовувати системну тему"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Розфарбовувати Вихідні",
-    "description": "Мітка для перемикача розфарбовування вихідних"
+    "message": "Розфарбувати вихідні",
+    "description": "Перемикач розфарбовування вихідних"
   }
 ,
   "popupEnableExtension": {
-    "message": "Увімкнути Розширення",
-    "description": "Мітка для перемикача увімкнення/вимкнення розширення"
+    "message": "Увімкнути розширення",
+    "description": "Перемикач розширення"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Світло-сірий",
+    "description": "Стандартний колір для світлої теми"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Теплий бежевий",
+    "description": "Стандартний колір для світлої теми"
+  }
+,
+  "popupThemeLight": {
+    "message": "Світла",
+    "description": "Світла тема"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Вугільний",
+    "description": "Стандартний колір для темної теми"
+  }
+,
+  "popupThemeDark": {
+    "message": "Темна",
+    "description": "Темна тема"
   }
 ,
   "extensionName": {
     "message": "Градієнтне об'єднання подій Google Calendar™",
-    "description": "Назва розширення, що об'єднує повторювані події календаря з градієнтами."
+    "description": "Розширення для об'єднання повторюваних подій з градієнтами"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "М'який фіолетовий",
+    "description": "Стандартний колір для світлої теми"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "М'який чорний",
+    "description": "Стандартний колір для темної теми"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Синьо-сірий",
+    "description": "Стандартний колір для темної теми"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Темно-синій",
+    "description": "Стандартний колір для темної теми"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "М'ятний",
+    "description": "Стандартний колір для світлої теми"
   }
 ,
   "extensionDescription": {
-    "message": "Об'єднує повторювані події Google Calendar у веселку та розфарбовує вихідні",
-    "description": "Опис, що пояснює основну функціональність розширення."
+    "message": "Об'єднує повторювані події у веселку та розфарбовує вихідні",
+    "description": "Опис основної функції розширення"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Базовий синій",
+    "description": "Стандартний колір для світлої теми"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Тема",
+    "description": "Вибір теми"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Колір вихідних (Темна)",
+    "description": "Колір вихідних для темної теми"
+  }
+,
+  "popupColorCustom": {
+    "message": "Власний...",
+    "description": "Обрати власний колір"
   }
 
 }

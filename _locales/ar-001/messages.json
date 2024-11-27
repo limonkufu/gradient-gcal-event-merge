@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "لون نهاية الأسبوع (المظهر الفاتح)",
+    "description": "اختيار لون نهاية الأسبوع للمظهر الفاتح"
+  }
+,
   "popupGradientOpacity": {
-    "message": "شفافية التدرج",
-    "description": "تسمية لشريط تمرير شفافية التدرج"
+    "message": "درجة الشفافية",
+    "description": "شريط تحكم الشفافية"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "الداكن الافتراضي",
+    "description": "لون جاهز للمظهر الداكن"
+  }
+,
+  "popupThemeSystem": {
+    "message": "النظام الافتراضي",
+    "description": "استخدام إعدادات مظهر النظام"
   }
 ,
   "popupEnableWeekends": {
-    "message": "تلوين عطلات نهاية الأسبوع",
-    "description": "تسمية لمفتاح تلوين عطلات نهاية الأسبوع"
+    "message": "تلوين نهاية الأسبوع",
+    "description": "زر تفعيل تلوين نهاية الأسبوع"
   }
 ,
   "popupEnableExtension": {
-    "message": "تمكين الإضافة",
-    "description": "تسمية لمفتاح تشغيل/إيقاف الإضافة"
+    "message": "تفعيل الإضافة",
+    "description": "زر تفعيل/تعطيل الإضافة"
+  }
+,
+  "popupColorLightGray": {
+    "message": "رمادي فاتح",
+    "description": "لون جاهز للمظهر الفاتح"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "بيج دافئ",
+    "description": "لون جاهز للمظهر الفاتح"
+  }
+,
+  "popupThemeLight": {
+    "message": "فاتح",
+    "description": "المظهر الفاتح"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "فحمي",
+    "description": "لون جاهز للمظهر الداكن"
+  }
+,
+  "popupThemeDark": {
+    "message": "داكن",
+    "description": "المظهر الداكن"
   }
 ,
   "extensionName": {
-    "message": "دمج متدرج لأحداث Google Calendar™",
-    "description": "اسم الإضافة التي تدمج أحداث التقويم المكررة مع التدرجات."
+    "message": "دمج متدرج لأحداث تقويم Google™",
+    "description": "إضافة لدمج أحداث التقويم المكررة بتأثيرات متدرجة"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "بنفسجي هادئ",
+    "description": "لون جاهز للمظهر الفاتح"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "أسود هادئ",
+    "description": "لون جاهز للمظهر الداكن"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "رمادي مزرق",
+    "description": "لون جاهز للمظهر الداكن"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "كحلي داكن",
+    "description": "لون جاهز للمظهر الداكن"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "أخضر نعناعي",
+    "description": "لون جاهز للمظهر الفاتح"
   }
 ,
   "extensionDescription": {
-    "message": "يدمج أحداث Google Calendar المكررة في قوس قزح ويلون عطلات نهاية الأسبوع",
-    "description": "وصف يشرح الوظيفة الرئيسية للإضافة."
+    "message": "يدمج الأحداث المكررة في قوس قزح ويلون عطلات نهاية الأسبوع",
+    "description": "وصف وظيفة الإضافة الرئيسية"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "الأزرق الافتراضي",
+    "description": "لون جاهز للمظهر الفاتح"
+  }
+,
+  "popupThemeSelect": {
+    "message": "المظهر",
+    "description": "اختيار المظهر"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "لون نهاية الأسبوع (المظهر الداكن)",
+    "description": "اختيار لون نهاية الأسبوع للمظهر الداكن"
+  }
+,
+  "popupColorCustom": {
+    "message": "مخصص...",
+    "description": "اختيار لون مخصص"
   }
 
 }

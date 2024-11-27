@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Couleur week-end (Clair)",
+    "description": "Couleur des week-ends pour le thème clair"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Opacité du Dégradé",
-    "description": "Étiquette pour le curseur d'opacité du dégradé"
+    "message": "Transparence",
+    "description": "Réglage de la transparence"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Sombre standard",
+    "description": "Couleur prédéfinie pour le thème sombre"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Système",
+    "description": "Utiliser le thème système"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Colorer les Week-ends",
-    "description": "Étiquette pour l'interrupteur de coloration des week-ends"
+    "message": "Colorer les week-ends",
+    "description": "Interrupteur pour les week-ends"
   }
 ,
   "popupEnableExtension": {
-    "message": "Activer l'Extension",
-    "description": "Étiquette pour l'interrupteur d'activation/désactivation de l'extension"
+    "message": "Activer l'extension",
+    "description": "Interrupteur de l'extension"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Gris clair",
+    "description": "Couleur prédéfinie pour le thème clair"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Beige chaud",
+    "description": "Couleur prédéfinie pour le thème clair"
+  }
+,
+  "popupThemeLight": {
+    "message": "Clair",
+    "description": "Thème clair"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Charbon",
+    "description": "Couleur prédéfinie pour le thème sombre"
+  }
+,
+  "popupThemeDark": {
+    "message": "Sombre",
+    "description": "Thème sombre"
   }
 ,
   "extensionName": {
-    "message": "Fusion en dégradé pour événements Google Calendar™",
-    "description": "Nom de l'extension qui fusionne les événements en double du calendrier avec des dégradés."
+    "message": "Fusion en dégradé pour Google Calendar™",
+    "description": "Extension qui fusionne les événements en double avec des dégradés"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Violet doux",
+    "description": "Couleur prédéfinie pour le thème clair"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Noir doux",
+    "description": "Couleur prédéfinie pour le thème sombre"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Gris bleuté",
+    "description": "Couleur prédéfinie pour le thème sombre"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Bleu marine",
+    "description": "Couleur prédéfinie pour le thème sombre"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Vert menthe",
+    "description": "Couleur prédéfinie pour le thème clair"
   }
 ,
   "extensionDescription": {
-    "message": "Fusionne les événements Google Calendar en double dans un arc-en-ciel et colore les week-ends",
-    "description": "Description expliquant la fonctionnalité principale de l'extension."
+    "message": "Fusionne les événements en double en arc-en-ciel et colore les week-ends",
+    "description": "Description de la fonction principale de l'extension"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Bleu standard",
+    "description": "Couleur prédéfinie pour le thème clair"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Thème",
+    "description": "Choix du thème"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Couleur week-end (Sombre)",
+    "description": "Couleur des week-ends pour le thème sombre"
+  }
+,
+  "popupColorCustom": {
+    "message": "Personnaliser...",
+    "description": "Choisir une couleur personnalisée"
   }
 
 }

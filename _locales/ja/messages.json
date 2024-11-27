@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "週末の色（ライト）",
+    "description": "ライトテーマの週末の色"
+  }
+,
   "popupGradientOpacity": {
-    "message": "グラデーションの不透明度",
-    "description": "グラデーションの不透明度スライダーのラベル"
+    "message": "透明度",
+    "description": "透明度の調整"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "標準のダーク",
+    "description": "ダークテーマのプリセット色"
+  }
+,
+  "popupThemeSystem": {
+    "message": "システム設定",
+    "description": "システムのテーマを使用"
   }
 ,
   "popupEnableWeekends": {
-    "message": "週末に色を付ける",
-    "description": "週末の色付けを切り替えるスイッチのラベル"
+    "message": "週末の色付け",
+    "description": "週末の色付けスイッチ"
   }
 ,
   "popupEnableExtension": {
-    "message": "拡張機能を有効にする",
-    "description": "拡張機能の有効/無効を切り替えるスイッチのラベル"
+    "message": "拡張機能を有効化",
+    "description": "拡張機能の切り替えスイッチ"
+  }
+,
+  "popupColorLightGray": {
+    "message": "ライトグレー",
+    "description": "ライトテーマのプリセット色"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "温かみのあるベージュ",
+    "description": "ライトテーマのプリセット色"
+  }
+,
+  "popupThemeLight": {
+    "message": "ライト",
+    "description": "ライトテーマ"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "チャコール",
+    "description": "ダークテーマのプリセット色"
+  }
+,
+  "popupThemeDark": {
+    "message": "ダーク",
+    "description": "ダークテーマ"
   }
 ,
   "extensionName": {
-    "message": "Google Calendar™ イベントのグラデーションマージ",
-    "description": "グラデーションで重複カレンダーイベントをマージする拡張機能の名前。"
+    "message": "Google Calendar™ イベントのグラデーション結合",
+    "description": "重複イベントをグラデーションで結合する拡張機能"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "優しい紫",
+    "description": "ライトテーマのプリセット色"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "柔らかい黒",
+    "description": "ダークテーマのプリセット色"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "ブルーグレー",
+    "description": "ダークテーマのプリセット色"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "ダークネイビー",
+    "description": "ダークテーマのプリセット色"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "ミントグリーン",
+    "description": "ライトテーマのプリセット色"
   }
 ,
   "extensionDescription": {
-    "message": "重複する Google Calendar のイベントを1つの虹色にマージし、週末に色を付けます",
-    "description": "拡張機能の主な機能を説明する説明文。"
+    "message": "重複イベントを虹色に結合し、週末に色を付けます",
+    "description": "拡張機能の主な機能の説明"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "標準の青",
+    "description": "ライトテーマのプリセット色"
+  }
+,
+  "popupThemeSelect": {
+    "message": "テーマ",
+    "description": "テーマの選択"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "週末の色（ダーク）",
+    "description": "ダークテーマの週末の色"
+  }
+,
+  "popupColorCustom": {
+    "message": "カスタム...",
+    "description": "カスタムカラーの選択"
   }
 
 }

@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Wochenendfarbe (Hell)",
+    "description": "Wochenendfarbe für helles Thema"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Gradient-Deckkraft",
-    "description": "Beschriftung für den Gradient-Deckkraft-Regler"
+    "message": "Transparenz",
+    "description": "Transparenzregler"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Standarddunkel",
+    "description": "Voreingestellte Farbe für dunkles Thema"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Systemstandard",
+    "description": "Systemthema verwenden"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Wochenenden Einfärben",
-    "description": "Beschriftung für den Schalter zum Einfärben der Wochenenden"
+    "message": "Wochenenden einfärben",
+    "description": "Schalter für Wochenendfarben"
   }
 ,
   "popupEnableExtension": {
-    "message": "Erweiterung Aktivieren",
-    "description": "Beschriftung für den Ein/Aus-Schalter der Erweiterung"
+    "message": "Erweiterung aktivieren",
+    "description": "Schalter für die Erweiterung"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Hellgrau",
+    "description": "Voreingestellte Farbe für helles Thema"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Warmbeige",
+    "description": "Voreingestellte Farbe für helles Thema"
+  }
+,
+  "popupThemeLight": {
+    "message": "Hell",
+    "description": "Helles Thema"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Anthrazit",
+    "description": "Voreingestellte Farbe für dunkles Thema"
+  }
+,
+  "popupThemeDark": {
+    "message": "Dunkel",
+    "description": "Dunkles Thema"
   }
 ,
   "extensionName": {
-    "message": "Gradient-Zusammenführung für Google Calendar™ Ereignisse",
-    "description": "Name der Erweiterung, die doppelte Kalenderereignisse mit Farbverläufen zusammenführt."
+    "message": "Farbverlauf-Zusammenführung für Google Calendar™",
+    "description": "Erweiterung zum Zusammenführen doppelter Kalenderereignisse mit Farbverläufen"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Zartes Violett",
+    "description": "Voreingestellte Farbe für helles Thema"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Samtgrau",
+    "description": "Voreingestellte Farbe für dunkles Thema"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Blaugrau",
+    "description": "Voreingestellte Farbe für dunkles Thema"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Marineblau",
+    "description": "Voreingestellte Farbe für dunkles Thema"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Mintgrün",
+    "description": "Voreingestellte Farbe für helles Thema"
   }
 ,
   "extensionDescription": {
-    "message": "Führt doppelte Google Calendar Ereignisse in einem Regenbogen zusammen und färbt die Wochenenden",
-    "description": "Beschreibung der Hauptfunktionalität der Erweiterung."
+    "message": "Führt doppelte Ereignisse in einem Regenbogen zusammen und färbt Wochenenden",
+    "description": "Beschreibung der Hauptfunktion der Erweiterung"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Standardblau",
+    "description": "Voreingestellte Farbe für helles Thema"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Thema",
+    "description": "Themenauswahl"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Wochenendfarbe (Dunkel)",
+    "description": "Wochenendfarbe für dunkles Thema"
+  }
+,
+  "popupColorCustom": {
+    "message": "Anpassen...",
+    "description": "Eigene Farbe wählen"
   }
 
 }

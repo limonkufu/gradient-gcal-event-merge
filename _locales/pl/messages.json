@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Kolor weekendów (Jasny)",
+    "description": "Kolor weekendów dla jasnego motywu"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Przezroczystość Gradientu",
-    "description": "Etykieta dla suwaka przezroczystości gradientu"
+    "message": "Przezroczystość",
+    "description": "Regulacja przezroczystości"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Domyślny ciemny",
+    "description": "Domyślny kolor dla ciemnego motywu"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Systemowy",
+    "description": "Użyj motywu systemowego"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Koloruj Weekendy",
-    "description": "Etykieta dla przełącznika kolorowania weekendów"
+    "message": "Koloruj weekendy",
+    "description": "Przełącznik kolorowania weekendów"
   }
 ,
   "popupEnableExtension": {
-    "message": "Włącz Rozszerzenie",
-    "description": "Etykieta dla przełącznika włączania/wyłączania rozszerzenia"
+    "message": "Włącz rozszerzenie",
+    "description": "Przełącznik rozszerzenia"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Jasnoszary",
+    "description": "Domyślny kolor dla jasnego motywu"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Ciepły beż",
+    "description": "Domyślny kolor dla jasnego motywu"
+  }
+,
+  "popupThemeLight": {
+    "message": "Jasny",
+    "description": "Jasny motyw"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Antracyt",
+    "description": "Domyślny kolor dla ciemnego motywu"
+  }
+,
+  "popupThemeDark": {
+    "message": "Ciemny",
+    "description": "Ciemny motyw"
   }
 ,
   "extensionName": {
-    "message": "Gradientowe Łączenie Wydarzeń Google Calendar™",
-    "description": "Nazwa rozszerzenia łączącego zduplikowane wydarzenia kalendarza z gradientami."
+    "message": "Gradientowe łączenie wydarzeń Google Calendar™",
+    "description": "Rozszerzenie łączące powtarzające się wydarzenia z gradientem"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Delikatny fiolet",
+    "description": "Domyślny kolor dla jasnego motywu"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Delikatna czerń",
+    "description": "Domyślny kolor dla ciemnego motywu"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Niebieskoszary",
+    "description": "Domyślny kolor dla ciemnego motywu"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Granatowy",
+    "description": "Domyślny kolor dla ciemnego motywu"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Miętowy",
+    "description": "Domyślny kolor dla jasnego motywu"
   }
 ,
   "extensionDescription": {
-    "message": "Łączy zduplikowane wydarzenia Google Calendar w tęczę i koloruje weekendy",
-    "description": "Opis wyjaśniający główną funkcjonalność rozszerzenia."
+    "message": "Łączy powtarzające się wydarzenia w tęczę i koloruje weekendy",
+    "description": "Opis głównej funkcji rozszerzenia"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Domyślny niebieski",
+    "description": "Domyślny kolor dla jasnego motywu"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Motyw",
+    "description": "Wybór motywu"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Kolor weekendów (Ciemny)",
+    "description": "Kolor weekendów dla ciemnego motywu"
+  }
+,
+  "popupColorCustom": {
+    "message": "Własny...",
+    "description": "Wybierz własny kolor"
   }
 
 }

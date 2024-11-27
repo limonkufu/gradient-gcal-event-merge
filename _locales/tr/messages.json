@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Haftasonu Rengi (Açık)",
+    "description": "Açık tema için haftasonu rengi"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Gradyan Opaklığı",
-    "description": "Gradyan opaklık kaydırıcısı için etiket"
+    "message": "Şeffaflık",
+    "description": "Şeffaflık ayarı"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Varsayılan Koyu",
+    "description": "Koyu tema için hazır renk"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Sistem",
+    "description": "Sistem temasını kullan"
   }
 ,
   "popupEnableWeekends": {
     "message": "Haftasonlarını Renklendir",
-    "description": "Haftasonu renklendirme düğmesi için etiket"
+    "description": "Haftasonu renklendirme düğmesi"
   }
 ,
   "popupEnableExtension": {
-    "message": "Uzantıyı Etkinleştir",
-    "description": "Uzantı etkinleştirme/devre dışı bırakma düğmesi için etiket"
+    "message": "Eklentiyi Etkinleştir",
+    "description": "Eklenti açma/kapama düğmesi"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Açık Gri",
+    "description": "Açık tema için hazır renk"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Sıcak Bej",
+    "description": "Açık tema için hazır renk"
+  }
+,
+  "popupThemeLight": {
+    "message": "Açık",
+    "description": "Açık tema"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Antrasit",
+    "description": "Koyu tema için hazır renk"
+  }
+,
+  "popupThemeDark": {
+    "message": "Koyu",
+    "description": "Koyu tema"
   }
 ,
   "extensionName": {
-    "message": "Google Calendar™ Etkinlikleri için Gradyan Birleştirme",
-    "description": "Yinelenen takvim etkinliklerini gradyanlarla birleştiren uzantının adı."
+    "message": "Google Calendar™ Etkinlikleri için Geçiş Efekti",
+    "description": "Yinelenen etkinlikleri renk geçişleriyle birleştiren eklenti"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Yumuşak Mor",
+    "description": "Açık tema için hazır renk"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Yumuşak Siyah",
+    "description": "Koyu tema için hazır renk"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Mavi Gri",
+    "description": "Koyu tema için hazır renk"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Lacivert",
+    "description": "Koyu tema için hazır renk"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Nane Yeşili",
+    "description": "Açık tema için hazır renk"
   }
 ,
   "extensionDescription": {
-    "message": "Yinelenen Google Calendar etkinliklerini gökkuşağına dönüştürür ve haftasonlarını renklendirir",
-    "description": "Uzantının ana işlevini açıklayan açıklama."
+    "message": "Yinelenen etkinlikleri gökkuşağı renklerinde birleştirir ve haftasonlarını renklendirir",
+    "description": "Eklentinin ana işlevinin açıklaması"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Varsayılan Mavi",
+    "description": "Açık tema için hazır renk"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Tema",
+    "description": "Tema seçimi"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Haftasonu Rengi (Koyu)",
+    "description": "Koyu tema için haftasonu rengi"
+  }
+,
+  "popupColorCustom": {
+    "message": "Özel...",
+    "description": "Özel renk seçimi"
   }
 
 }

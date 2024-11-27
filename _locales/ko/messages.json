@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "주말 색상 (라이트)",
+    "description": "라이트 테마의 주말 색상"
+  }
+,
   "popupGradientOpacity": {
-    "message": "그라데이션 불투명도",
-    "description": "그라데이션 불투명도 슬라이더의 레이블"
+    "message": "투명도",
+    "description": "투명도 조절"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "기본 다크",
+    "description": "다크 테마 기본 색상"
+  }
+,
+  "popupThemeSystem": {
+    "message": "시스템",
+    "description": "시스템 테마 사용"
   }
 ,
   "popupEnableWeekends": {
-    "message": "주말 색상 적용",
-    "description": "주말 색상 적용 토글 스위치의 레이블"
+    "message": "주말 색상",
+    "description": "주말 색상 켜기/끄기"
   }
 ,
   "popupEnableExtension": {
-    "message": "확장 프로그램 활성화",
-    "description": "확장 프로그램 활성화/비활성화 토글 스위치의 레이블"
+    "message": "확장 프로그램 사용",
+    "description": "확장 프로그램 켜기/끄기"
+  }
+,
+  "popupColorLightGray": {
+    "message": "밝은 회색",
+    "description": "라이트 테마 기본 색상"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "따뜻한 베이지",
+    "description": "라이트 테마 기본 색상"
+  }
+,
+  "popupThemeLight": {
+    "message": "라이트",
+    "description": "라이트 테마"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "차콜",
+    "description": "다크 테마 기본 색상"
+  }
+,
+  "popupThemeDark": {
+    "message": "다크",
+    "description": "다크 테마"
   }
 ,
   "extensionName": {
     "message": "Google Calendar™ 이벤트 그라데이션 병합",
-    "description": "그라데이션으로 중복 캘린더 이벤트를 병합하는 확장 프로그램의 이름입니다."
+    "description": "중복 일정을 그라데이션으로 병합하는 확장 프로그램"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "부드러운 보라",
+    "description": "라이트 테마 기본 색상"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "부드러운 검정",
+    "description": "다크 테마 기본 색상"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "블루그레이",
+    "description": "다크 테마 기본 색상"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "네이비",
+    "description": "다크 테마 기본 색상"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "민트",
+    "description": "라이트 테마 기본 색상"
   }
 ,
   "extensionDescription": {
-    "message": "중복된 Google Calendar 이벤트를 무지개색으로 병합하고 주말에 색상을 입힙니다",
-    "description": "확장 프로그램의 주요 기능을 설명하는 설명입니다."
+    "message": "중복 일정을 무지개색으로 병합하고 주말에 색상 적용",
+    "description": "확장 프로그램의 주요 기능 설명"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "기본 파란색",
+    "description": "라이트 테마 기본 색상"
+  }
+,
+  "popupThemeSelect": {
+    "message": "테마",
+    "description": "테마 선택"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "주말 색상 (다크)",
+    "description": "다크 테마의 주말 색상"
+  }
+,
+  "popupColorCustom": {
+    "message": "직접 선택...",
+    "description": "사용자 지정 색상"
   }
 
 }

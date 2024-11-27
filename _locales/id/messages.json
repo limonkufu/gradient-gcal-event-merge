@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Warna Akhir Pekan (Terang)",
+    "description": "Warna akhir pekan untuk tema terang"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Kegelapan Gradien",
-    "description": "Label untuk penggeser kegelapan gradien"
+    "message": "Transparansi",
+    "description": "Pengaturan transparansi"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Gelap Default",
+    "description": "Warna preset untuk tema gelap"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Sistem",
+    "description": "Gunakan tema sistem"
   }
 ,
   "popupEnableWeekends": {
     "message": "Warnai Akhir Pekan",
-    "description": "Label untuk tombol pewarnaan akhir pekan"
+    "description": "Tombol pewarnaan akhir pekan"
   }
 ,
   "popupEnableExtension": {
     "message": "Aktifkan Ekstensi",
-    "description": "Label untuk tombol aktif/nonaktif ekstensi"
+    "description": "Tombol aktif/nonaktif ekstensi"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Abu-abu Terang",
+    "description": "Warna preset untuk tema terang"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Beige Hangat",
+    "description": "Warna preset untuk tema terang"
+  }
+,
+  "popupThemeLight": {
+    "message": "Terang",
+    "description": "Tema terang"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Arang",
+    "description": "Warna preset untuk tema gelap"
+  }
+,
+  "popupThemeDark": {
+    "message": "Gelap",
+    "description": "Tema gelap"
   }
 ,
   "extensionName": {
-    "message": "Penggabungan Gradien untuk Acara Google Calendar™",
-    "description": "Nama ekstensi yang menggabungkan acara kalender duplikat dengan gradien."
+    "message": "Penggabungan Gradien untuk Google Calendar™",
+    "description": "Ekstensi yang menggabungkan acara berulang dengan gradien"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Ungu Lembut",
+    "description": "Warna preset untuk tema terang"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Hitam Lembut",
+    "description": "Warna preset untuk tema gelap"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Abu-abu Biru",
+    "description": "Warna preset untuk tema gelap"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Biru Tua",
+    "description": "Warna preset untuk tema gelap"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Hijau Mint",
+    "description": "Warna preset untuk tema terang"
   }
 ,
   "extensionDescription": {
-    "message": "Menggabungkan acara Google Calendar yang duplikat menjadi pelangi dan mewarnai akhir pekan",
-    "description": "Deskripsi yang menjelaskan fungsi utama ekstensi."
+    "message": "Menggabungkan acara berulang menjadi pelangi dan mewarnai akhir pekan",
+    "description": "Penjelasan fungsi utama ekstensi"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Biru Default",
+    "description": "Warna preset untuk tema terang"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Tema",
+    "description": "Pilihan tema"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Warna Akhir Pekan (Gelap)",
+    "description": "Warna akhir pekan untuk tema gelap"
+  }
+,
+  "popupColorCustom": {
+    "message": "Kustom...",
+    "description": "Pilih warna sendiri"
   }
 
 }

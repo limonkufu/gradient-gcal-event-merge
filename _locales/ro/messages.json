@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Culoare weekend (Luminoasă)",
+    "description": "Culoarea weekendului pentru tema luminoasă"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Opacitate Gradient",
-    "description": "Etichetă pentru glisorul de opacitate al gradientului"
+    "message": "Transparență",
+    "description": "Reglare transparență"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Întunecat implicit",
+    "description": "Culoare predefinită pentru tema întunecată"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Sistem",
+    "description": "Folosește tema sistemului"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Colorează Weekendurile",
-    "description": "Etichetă pentru comutatorul de colorare a weekendurilor"
+    "message": "Colorare weekenduri",
+    "description": "Comutator pentru colorarea weekendurilor"
   }
 ,
   "popupEnableExtension": {
-    "message": "Activare Extensie",
-    "description": "Etichetă pentru comutatorul de activare/dezactivare a extensiei"
+    "message": "Activare extensie",
+    "description": "Comutator pentru extensie"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Gri deschis",
+    "description": "Culoare predefinită pentru tema luminoasă"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Bej cald",
+    "description": "Culoare predefinită pentru tema luminoasă"
+  }
+,
+  "popupThemeLight": {
+    "message": "Luminoasă",
+    "description": "Temă luminoasă"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Antracit",
+    "description": "Culoare predefinită pentru tema întunecată"
+  }
+,
+  "popupThemeDark": {
+    "message": "Întunecată",
+    "description": "Temă întunecată"
   }
 ,
   "extensionName": {
-    "message": "Fuziune Gradientă pentru Evenimente Google Calendar™",
-    "description": "Numele extensiei care combină evenimente duplicate din calendar cu gradiente."
+    "message": "Fuziune în gradient pentru Google Calendar™",
+    "description": "Extensie pentru combinarea evenimentelor duplicate cu gradiente"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Violet delicat",
+    "description": "Culoare predefinită pentru tema luminoasă"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Negru delicat",
+    "description": "Culoare predefinită pentru tema întunecată"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Gri-albăstrui",
+    "description": "Culoare predefinită pentru tema întunecată"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Bleumarin închis",
+    "description": "Culoare predefinită pentru tema întunecată"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Verde mentă",
+    "description": "Culoare predefinită pentru tema luminoasă"
   }
 ,
   "extensionDescription": {
-    "message": "Combină evenimentele duplicate din Google Calendar într-un curcubeu și colorează weekendurile",
-    "description": "Descriere care explică funcționalitatea principală a extensiei."
+    "message": "Combină evenimentele duplicate într-un curcubeu și colorează weekendurile",
+    "description": "Descrierea funcției principale a extensiei"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Albastru implicit",
+    "description": "Culoare predefinită pentru tema luminoasă"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Temă",
+    "description": "Selectare temă"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Culoare weekend (Întunecată)",
+    "description": "Culoarea weekendului pentru tema întunecată"
+  }
+,
+  "popupColorCustom": {
+    "message": "Personalizată...",
+    "description": "Alege o culoare personalizată"
   }
 
 }

@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "周末颜色（浅色主题）",
+    "description": "浅色主题周末颜色选择"
+  }
+,
   "popupGradientOpacity": {
-    "message": "渐变不透明度",
-    "description": "渐变不透明度滑块的标签"
+    "message": "透明度",
+    "description": "透明度滑块的标签"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "默认深色",
+    "description": "深色主题预设颜色"
+  }
+,
+  "popupThemeSystem": {
+    "message": "系统默认",
+    "description": "使用系统主题设置"
   }
 ,
   "popupEnableWeekends": {
-    "message": "为周末着色",
+    "message": "周末着色",
     "description": "周末着色开关的标签"
   }
 ,
   "popupEnableExtension": {
     "message": "启用扩展",
-    "description": "扩展启用/禁用开关的标签"
+    "description": "扩展程序开关的标签"
+  }
+,
+  "popupColorLightGray": {
+    "message": "浅灰",
+    "description": "浅色主题预设颜色"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "暖米色",
+    "description": "浅色主题预设颜色"
+  }
+,
+  "popupThemeLight": {
+    "message": "浅色",
+    "description": "浅色主题选项"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "炭黑",
+    "description": "深色主题预设颜色"
+  }
+,
+  "popupThemeDark": {
+    "message": "深色",
+    "description": "深色主题选项"
   }
 ,
   "extensionName": {
     "message": "Google Calendar™ 事件渐变合并",
-    "description": "合并具有渐变效果的重复日历事件的扩展名称。"
+    "description": "合并重复日历事件的渐变效果扩展程序。"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "柔紫",
+    "description": "浅色主题预设颜色"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "柔黑",
+    "description": "深色主题预设颜色"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "蓝灰",
+    "description": "深色主题预设颜色"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "深蓝",
+    "description": "深色主题预设颜色"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "薄荷绿",
+    "description": "浅色主题预设颜色"
   }
 ,
   "extensionDescription": {
-    "message": "将重复的 Google Calendar 事件合并为彩虹效果并为周末着色",
-    "description": "解释扩展主要功能的描述。"
+    "message": "将重复的日历事件合并为彩虹效果并为周末着色",
+    "description": "扩展程序的主要功能说明。"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "默认蓝",
+    "description": "浅色主题默认颜色"
+  }
+,
+  "popupThemeSelect": {
+    "message": "主题",
+    "description": "主题选择下拉菜单的标签"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "周末颜色（深色主题）",
+    "description": "深色主题周末颜色选择"
+  }
+,
+  "popupColorCustom": {
+    "message": "自定义...",
+    "description": "自定义颜色选择"
   }
 
 }

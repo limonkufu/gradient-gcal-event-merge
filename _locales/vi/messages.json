@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Màu cuối tuần (Sáng)",
+    "description": "Màu cuối tuần cho giao diện sáng"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Độ Mờ Gradient",
-    "description": "Nhãn cho thanh trượt độ mờ gradient"
+    "message": "Độ trong suốt",
+    "description": "Điều chỉnh độ trong suốt"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Tối mặc định",
+    "description": "Màu có sẵn cho giao diện tối"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Hệ thống",
+    "description": "Dùng giao diện hệ thống"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Tô Màu Cuối Tuần",
-    "description": "Nhãn cho công tắc tô màu cuối tuần"
+    "message": "Tô màu cuối tuần",
+    "description": "Nút tô màu cuối tuần"
   }
 ,
   "popupEnableExtension": {
-    "message": "Bật Tiện Ích Mở Rộng",
-    "description": "Nhãn cho công tắc bật/tắt tiện ích mở rộng"
+    "message": "Bật tiện ích",
+    "description": "Nút bật/tắt tiện ích"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Xám nhạt",
+    "description": "Màu có sẵn cho giao diện sáng"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Be ấm",
+    "description": "Màu có sẵn cho giao diện sáng"
+  }
+,
+  "popupThemeLight": {
+    "message": "Sáng",
+    "description": "Giao diện sáng"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Than chì",
+    "description": "Màu có sẵn cho giao diện tối"
+  }
+,
+  "popupThemeDark": {
+    "message": "Tối",
+    "description": "Giao diện tối"
   }
 ,
   "extensionName": {
-    "message": "Kết hợp Gradient cho Sự kiện Google Calendar™",
-    "description": "Tên tiện ích mở rộng kết hợp các sự kiện lịch trùng lặp với gradient."
+    "message": "Trộn màu chuyển sắc cho Sự kiện Google Calendar™",
+    "description": "Tiện ích mở rộng kết hợp sự kiện trùng lặp với hiệu ứng chuyển màu"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Tím nhẹ",
+    "description": "Màu có sẵn cho giao diện sáng"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Đen nhẹ",
+    "description": "Màu có sẵn cho giao diện tối"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Xám xanh",
+    "description": "Màu có sẵn cho giao diện tối"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Xanh đen",
+    "description": "Màu có sẵn cho giao diện tối"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Xanh bạc hà",
+    "description": "Màu có sẵn cho giao diện sáng"
   }
 ,
   "extensionDescription": {
-    "message": "Kết hợp các sự kiện trùng lặp của Google Calendar thành cầu vồng và tô màu các ngày cuối tuần",
-    "description": "Mô tả giải thích chức năng chính của tiện ích mở rộng."
+    "message": "Kết hợp các sự kiện trùng lặp thành cầu vồng và tô màu cuối tuần",
+    "description": "Mô tả chức năng chính của tiện ích"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Xanh mặc định",
+    "description": "Màu có sẵn cho giao diện sáng"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Giao diện",
+    "description": "Chọn giao diện"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Màu cuối tuần (Tối)",
+    "description": "Màu cuối tuần cho giao diện tối"
+  }
+,
+  "popupColorCustom": {
+    "message": "Tùy chọn...",
+    "description": "Chọn màu tùy chỉnh"
   }
 
 }

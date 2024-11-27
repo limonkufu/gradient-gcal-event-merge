@@ -1,7 +1,22 @@
 {
+  "popupLightThemeColor": {
+    "message": "Light Theme Weekend Color",
+    "description": "Label for light theme weekend color selection"
+  }
+,
   "popupGradientOpacity": {
     "message": "Gradient Opacity",
     "description": "Label for the gradient opacity slider"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Default Dark",
+    "description": "Preset color option for dark theme"
+  }
+,
+  "popupThemeSystem": {
+    "message": "System Default",
+    "description": "Option to use system theme settings"
   }
 ,
   "popupEnableWeekends": {
@@ -14,14 +29,84 @@
     "description": "Label for the extension enable/disable toggle switch"
   }
 ,
+  "popupColorLightGray": {
+    "message": "Light Gray",
+    "description": "Preset color option for light theme"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Warm Beige",
+    "description": "Preset color option for light theme"
+  }
+,
+  "popupThemeLight": {
+    "message": "Light",
+    "description": "Option for light theme"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Charcoal",
+    "description": "Preset color option for dark theme"
+  }
+,
+  "popupThemeDark": {
+    "message": "Dark",
+    "description": "Option for dark theme"
+  }
+,
   "extensionName": {
     "message": "Gradient Merge for Google Calendar™ Events",
     "description": "Name of the extension that merges duplicate calendar events with gradients."
   }
 ,
+  "popupColorSoftPurple": {
+    "message": "Soft Purple",
+    "description": "Preset color option for light theme"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Soft Black",
+    "description": "Preset color option for dark theme"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Blue Gray",
+    "description": "Preset color option for dark theme"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Navy Dark",
+    "description": "Preset color option for dark theme"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Mint Green",
+    "description": "Preset color option for light theme"
+  }
+,
   "extensionDescription": {
     "message": "Merges duplicate Google Calendar events into one rainbow and colors the weekends.",
     "description": "Description explaining the extension's main functionality."
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Default Blue",
+    "description": "Preset color option for light theme"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Theme",
+    "description": "Label for the theme selection dropdown"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Dark Theme Weekend Color",
+    "description": "Label for dark theme weekend color selection"
+  }
+,
+  "popupColorCustom": {
+    "message": "Custom...",
+    "description": "Option for custom color selection"
   }
 
 }

@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Цвет выходных (светлая тема)",
+    "description": "Выбор цвета выходных для светлой темы"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Прозрачность Градиента",
-    "description": "Метка для ползунка прозрачности градиента"
+    "message": "Прозрачность",
+    "description": "Регулятор прозрачности"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Стандартный тёмный",
+    "description": "Готовый цвет для тёмной темы"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Как в системе",
+    "description": "Использовать системную тему"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Окрашивать Выходные",
-    "description": "Метка для переключателя окрашивания выходных"
+    "message": "Раскрасить выходные",
+    "description": "Переключатель окраски выходных"
   }
 ,
   "popupEnableExtension": {
-    "message": "Включить Расширение",
-    "description": "Метка для переключателя включения/выключения расширения"
+    "message": "Включить расширение",
+    "description": "Переключатель расширения"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Светло-серый",
+    "description": "Готовый цвет для светлой темы"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Тёплый бежевый",
+    "description": "Готовый цвет для светлой темы"
+  }
+,
+  "popupThemeLight": {
+    "message": "Светлая",
+    "description": "Светлая тема"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Угольный",
+    "description": "Готовый цвет для тёмной темы"
+  }
+,
+  "popupThemeDark": {
+    "message": "Тёмная",
+    "description": "Тёмная тема"
   }
 ,
   "extensionName": {
     "message": "Градиентное объединение событий Google Calendar™",
-    "description": "Название расширения, объединяющего повторяющиеся события календаря с градиентами."
+    "description": "Расширение для объединения повторяющихся событий с градиентами"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Нежно-фиолетовый",
+    "description": "Готовый цвет для светлой темы"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Мягкий чёрный",
+    "description": "Готовый цвет для тёмной темы"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Серо-голубой",
+    "description": "Готовый цвет для тёмной темы"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Тёмно-синий",
+    "description": "Готовый цвет для тёмной темы"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Мятный",
+    "description": "Готовый цвет для светлой темы"
   }
 ,
   "extensionDescription": {
-    "message": "Объединяет повторяющиеся события Google Calendar в радугу и окрашивает выходные",
-    "description": "Описание, объясняющее основную функциональность расширения."
+    "message": "Объединяет повторяющиеся события в радугу и раскрашивает выходные",
+    "description": "Описание основной функции расширения"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Стандартный синий",
+    "description": "Готовый цвет для светлой темы"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Тема",
+    "description": "Выбор темы"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Цвет выходных (тёмная тема)",
+    "description": "Выбор цвета выходных для тёмной темы"
+  }
+,
+  "popupColorCustom": {
+    "message": "Свой...",
+    "description": "Выбор своего цвета"
   }
 
 }

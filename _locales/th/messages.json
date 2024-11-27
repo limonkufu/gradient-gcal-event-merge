@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "สีวันหยุด (สว่าง)",
+    "description": "เลือกสีวันหยุดสำหรับธีมสว่าง"
+  }
+,
   "popupGradientOpacity": {
-    "message": "ความทึบของการไล่ระดับ",
-    "description": "ป้ายกำกับสำหรับตัวเลื่อนความทึบของการไล่ระดับ"
+    "message": "ความโปร่งใส",
+    "description": "ปรับความโปร่งใส"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "มืดมาตรฐาน",
+    "description": "สีมาตรฐานสำหรับธีมมืด"
+  }
+,
+  "popupThemeSystem": {
+    "message": "ระบบ",
+    "description": "ใช้ธีมระบบ"
   }
 ,
   "popupEnableWeekends": {
-    "message": "ระบายสีวันสุดสัปดาห์",
-    "description": "ป้ายกำกับสำหรับสวิตช์ระบายสีวันสุดสัปดาห์"
+    "message": "ระบายสีวันหยุด",
+    "description": "ปุ่มระบายสีวันหยุด"
   }
 ,
   "popupEnableExtension": {
-    "message": "เปิดใช้งานส่วนขยาย",
-    "description": "ป้ายกำกับสำหรับสวิตช์เปิด/ปิดส่วนขยาย"
+    "message": "เปิดส่วนขยาย",
+    "description": "ปุ่มเปิด/ปิดส่วนขยาย"
+  }
+,
+  "popupColorLightGray": {
+    "message": "เทาอ่อน",
+    "description": "สีมาตรฐานสำหรับธีมสว่าง"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "เบจอุ่น",
+    "description": "สีมาตรฐานสำหรับธีมสว่าง"
+  }
+,
+  "popupThemeLight": {
+    "message": "สว่าง",
+    "description": "ธีมสว่าง"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "เทาเข้ม",
+    "description": "สีมาตรฐานสำหรับธีมมืด"
+  }
+,
+  "popupThemeDark": {
+    "message": "มืด",
+    "description": "ธีมมืด"
   }
 ,
   "extensionName": {
-    "message": "การผสานแบบไล่ระดับสำหรับกิจกรรม Google Calendar™",
-    "description": "ชื่อส่วนขยายที่ผสานกิจกรรมปฏิทินที่ซ้ำซ้อนด้วยการไล่ระดับ"
+    "message": "ผสานไล่ระดับสีสำหรับกิจกรรม Google Calendar™",
+    "description": "ส่วนขยายที่ผสานกิจกรรมที่ซ้ำกันด้วยการไล่ระดับสี"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "ม่วงอ่อน",
+    "description": "สีมาตรฐานสำหรับธีมสว่าง"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "ดำอ่อน",
+    "description": "สีมาตรฐานสำหรับธีมมืด"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "เทาน้ำเงิน",
+    "description": "สีมาตรฐานสำหรับธีมมืด"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "กรมท่ามืด",
+    "description": "สีมาตรฐานสำหรับธีมมืด"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "เขียวมิ้นท์",
+    "description": "สีมาตรฐานสำหรับธีมสว่าง"
   }
 ,
   "extensionDescription": {
-    "message": "ผสานกิจกรรม Google Calendar ที่ซ้ำซ้อนให้เป็นสีรุ้งและระบายสีวันสุดสัปดาห์",
-    "description": "คำอธิบายที่อธิบายฟังก์ชันหลักของส่วนขยาย"
+    "message": "ผสานกิจกรรมที่ซ้ำกันให้เป็นสีรุ้งและระบายสีวันหยุดสุดสัปดาห์",
+    "description": "คำอธิบายฟังก์ชันหลักของส่วนขยาย"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "น้ำเงินมาตรฐาน",
+    "description": "สีมาตรฐานสำหรับธีมสว่าง"
+  }
+,
+  "popupThemeSelect": {
+    "message": "ธีม",
+    "description": "เลือกธีม"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "สีวันหยุด (มืด)",
+    "description": "เลือกสีวันหยุดสำหรับธีมมืด"
+  }
+,
+  "popupColorCustom": {
+    "message": "กำหนดเอง...",
+    "description": "เลือกสีเอง"
   }
 
 }

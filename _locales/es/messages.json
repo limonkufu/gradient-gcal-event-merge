@@ -1,7 +1,22 @@
 {
+  "popupLightThemeColor": {
+    "message": "Color de Fin de Semana (Tema Claro)",
+    "description": "Etiqueta para selección de color de fin de semana en tema claro"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Opacidad del Degradado",
-    "description": "Etiqueta para el control deslizante de opacidad del degradado"
+    "message": "Transparencia",
+    "description": "Etiqueta para el control de transparencia"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Oscuro Predeterminado",
+    "description": "Opción de color preestablecido para tema oscuro"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Predeterminado del Sistema",
+    "description": "Opción para usar la configuración del tema del sistema"
   }
 ,
   "popupEnableWeekends": {
@@ -14,14 +29,84 @@
     "description": "Etiqueta para el interruptor de activar/desactivar la extensión"
   }
 ,
+  "popupColorLightGray": {
+    "message": "Gris Claro",
+    "description": "Opción de color preestablecido para tema claro"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Beige Cálido",
+    "description": "Opción de color preestablecido para tema claro"
+  }
+,
+  "popupThemeLight": {
+    "message": "Claro",
+    "description": "Opción para tema claro"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Carbón",
+    "description": "Opción de color preestablecido para tema oscuro"
+  }
+,
+  "popupThemeDark": {
+    "message": "Oscuro",
+    "description": "Opción para tema oscuro"
+  }
+,
   "extensionName": {
-    "message": "Fusión Degradada para Eventos de Google Calendar™",
+    "message": "Fusión con Degradado para Eventos de Google Calendar™",
     "description": "Nombre de la extensión que fusiona eventos duplicados del calendario con degradados."
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Púrpura Suave",
+    "description": "Opción de color preestablecido para tema claro"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Negro Suave",
+    "description": "Opción de color preestablecido para tema oscuro"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Gris Azulado",
+    "description": "Opción de color preestablecido para tema oscuro"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Azul Marino Oscuro",
+    "description": "Opción de color preestablecido para tema oscuro"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Verde Menta",
+    "description": "Opción de color preestablecido para tema claro"
   }
 ,
   "extensionDescription": {
     "message": "Combina eventos duplicados de Google Calendar en un arcoíris y colorea los fines de semana",
     "description": "Descripción que explica la funcionalidad principal de la extensión."
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Azul Predeterminado",
+    "description": "Opción de color preestablecido para tema claro"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Tema",
+    "description": "Etiqueta para la selección de tema"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Color de Fin de Semana (Tema Oscuro)",
+    "description": "Etiqueta para selección de color de fin de semana en tema oscuro"
+  }
+,
+  "popupColorCustom": {
+    "message": "Personalizado...",
+    "description": "Opción para selección de color personalizado"
   }
 
 }

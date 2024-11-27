@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Weekendkleur (Licht)",
+    "description": "Weekendkleur voor licht thema"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Gradiënt Transparantie",
-    "description": "Label voor de gradiënt transparantie schuifregelaar"
+    "message": "Transparantie",
+    "description": "Transparantie aanpassen"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Standaarddonker",
+    "description": "Standaardkleur voor donker thema"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Systeem",
+    "description": "Systeemthema gebruiken"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Weekenden Kleuren",
-    "description": "Label voor de weekenden kleuring schakelaar"
+    "message": "Weekenden kleuren",
+    "description": "Schakelaar voor weekendkleuring"
   }
 ,
   "popupEnableExtension": {
-    "message": "Extensie Inschakelen",
-    "description": "Label voor de extensie aan/uit-schakelaar"
+    "message": "Extensie inschakelen",
+    "description": "Schakelaar voor de extensie"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Lichtgrijs",
+    "description": "Standaardkleur voor licht thema"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Warm beige",
+    "description": "Standaardkleur voor licht thema"
+  }
+,
+  "popupThemeLight": {
+    "message": "Licht",
+    "description": "Licht thema"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Antraciet",
+    "description": "Standaardkleur voor donker thema"
+  }
+,
+  "popupThemeDark": {
+    "message": "Donker",
+    "description": "Donker thema"
   }
 ,
   "extensionName": {
-    "message": "Gradiënt Samenvoegen voor Google Calendar™ Gebeurtenissen",
-    "description": "Naam van de extensie die dubbele agenda-gebeurtenissen samenvoegt met gradiënten."
+    "message": "Kleurovergang voor Google Calendar™",
+    "description": "Extensie die dubbele agenda-items samenvoegt met kleurovergangen"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Zacht paars",
+    "description": "Standaardkleur voor licht thema"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Zacht zwart",
+    "description": "Standaardkleur voor donker thema"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Blauwgrijs",
+    "description": "Standaardkleur voor donker thema"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Marineblauw",
+    "description": "Standaardkleur voor donker thema"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Mintgroen",
+    "description": "Standaardkleur voor licht thema"
   }
 ,
   "extensionDescription": {
-    "message": "Voegt dubbele Google Calendar gebeurtenissen samen in een regenboog en kleurt de weekenden",
-    "description": "Beschrijving die de hoofdfunctionaliteit van de extensie uitlegt."
+    "message": "Voegt dubbele agenda-items samen in regenboogkleuren en kleurt weekenden",
+    "description": "Uitleg van de hoofdfunctie van de extensie"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Standaardblauw",
+    "description": "Standaardkleur voor licht thema"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Thema",
+    "description": "Thema kiezen"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Weekendkleur (Donker)",
+    "description": "Weekendkleur voor donker thema"
+  }
+,
+  "popupColorCustom": {
+    "message": "Aangepast...",
+    "description": "Eigen kleur kiezen"
   }
 
 }

@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "Colore weekend (Chiaro)",
+    "description": "Colore weekend per tema chiaro"
+  }
+,
   "popupGradientOpacity": {
-    "message": "Opacità del Gradiente",
-    "description": "Etichetta per il cursore dell'opacità del gradiente"
+    "message": "Trasparenza",
+    "description": "Regolazione trasparenza"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "Scuro predefinito",
+    "description": "Colore predefinito per tema scuro"
+  }
+,
+  "popupThemeSystem": {
+    "message": "Sistema",
+    "description": "Usa tema di sistema"
   }
 ,
   "popupEnableWeekends": {
-    "message": "Colora Fine Settimana",
-    "description": "Etichetta per l'interruttore di colorazione dei fine settimana"
+    "message": "Colora weekend",
+    "description": "Interruttore per colorare i weekend"
   }
 ,
   "popupEnableExtension": {
-    "message": "Attiva Estensione",
-    "description": "Etichetta per l'interruttore di attivazione/disattivazione dell'estensione"
+    "message": "Attiva estensione",
+    "description": "Interruttore dell'estensione"
+  }
+,
+  "popupColorLightGray": {
+    "message": "Grigio chiaro",
+    "description": "Colore predefinito per tema chiaro"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "Beige caldo",
+    "description": "Colore predefinito per tema chiaro"
+  }
+,
+  "popupThemeLight": {
+    "message": "Chiaro",
+    "description": "Tema chiaro"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "Antracite",
+    "description": "Colore predefinito per tema scuro"
+  }
+,
+  "popupThemeDark": {
+    "message": "Scuro",
+    "description": "Tema scuro"
   }
 ,
   "extensionName": {
-    "message": "Fusione Gradiente per Eventi di Google Calendar™",
-    "description": "Nome dell'estensione che unisce eventi duplicati del calendario con gradienti."
+    "message": "Fusione a gradiente per Google Calendar™",
+    "description": "Estensione che unisce eventi duplicati con gradienti"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "Viola tenue",
+    "description": "Colore predefinito per tema chiaro"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "Nero tenue",
+    "description": "Colore predefinito per tema scuro"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "Grigio blu",
+    "description": "Colore predefinito per tema scuro"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "Blu navy",
+    "description": "Colore predefinito per tema scuro"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "Verde menta",
+    "description": "Colore predefinito per tema chiaro"
   }
 ,
   "extensionDescription": {
-    "message": "Unisce eventi duplicati di Google Calendar in un arcobaleno e colora i fine settimana",
-    "description": "Descrizione che spiega la funzionalità principale dell'estensione."
+    "message": "Unisce eventi duplicati in arcobaleno e colora i weekend",
+    "description": "Descrizione della funzione principale dell'estensione"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "Blu predefinito",
+    "description": "Colore predefinito per tema chiaro"
+  }
+,
+  "popupThemeSelect": {
+    "message": "Tema",
+    "description": "Selezione tema"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "Colore weekend (Scuro)",
+    "description": "Colore weekend per tema scuro"
+  }
+,
+  "popupColorCustom": {
+    "message": "Personalizza...",
+    "description": "Scegli colore personalizzato"
   }
 
 }

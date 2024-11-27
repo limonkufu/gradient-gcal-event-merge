@@ -1,27 +1,112 @@
 {
+  "popupLightThemeColor": {
+    "message": "सप्ताहांत रंग (लाइट थीम)",
+    "description": "लाइट थीम में सप्ताहांत का रंग चुनें"
+  }
+,
   "popupGradientOpacity": {
-    "message": "ग्रेडिएंट अपारदर्शिता",
-    "description": "ग्रेडिएंट अपारदर्शिता स्लाइडर के लिए लेबल"
+    "message": "पारदर्शिता",
+    "description": "पारदर्शिता स्लाइडर का लेबल"
+  }
+,
+  "popupColorDefaultDark": {
+    "message": "डिफ़ॉल्ट डार्क",
+    "description": "डार्क थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupThemeSystem": {
+    "message": "सिस्टम डिफ़ॉल्ट",
+    "description": "सिस्टम थीम सेटिंग्स का उपयोग करें"
   }
 ,
   "popupEnableWeekends": {
-    "message": "सप्ताहांत को रंगें",
-    "description": "सप्ताहांत रंगने के टॉगल स्विच के लिए लेबल"
+    "message": "सप्ताहांत रंगें",
+    "description": "सप्ताहांत रंगने के स्विच का लेबल"
   }
 ,
   "popupEnableExtension": {
-    "message": "एक्सटेंशन सक्षम करें",
-    "description": "एक्सटेंशन सक्षम/अक्षम टॉगल स्विच के लिए लेबल"
+    "message": "एक्सटेंशन चालू करें",
+    "description": "एक्सटेंशन चालू/बंद स्विच का लेबल"
+  }
+,
+  "popupColorLightGray": {
+    "message": "हल्का ग्रे",
+    "description": "लाइट थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupColorWarmBeige": {
+    "message": "गर्म बेज",
+    "description": "लाइट थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupThemeLight": {
+    "message": "लाइट",
+    "description": "लाइट थीम विकल्प"
+  }
+,
+  "popupColorCharcoal": {
+    "message": "कोयला काला",
+    "description": "डार्क थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupThemeDark": {
+    "message": "डार्क",
+    "description": "डार्क थीम विकल्प"
   }
 ,
   "extensionName": {
     "message": "Google Calendar™ इवेंट्स के लिए ग्रेडिएंट मर्ज",
-    "description": "ग्रेडिएंट के साथ डुप्लिकेट कैलेंडर इवेंट्स को मर्ज करने वाले एक्सटेंशन का नाम।"
+    "description": "डुप्लिकेट कैलेंडर इवेंट्स को ग्रेडिएंट के साथ मर्ज करने वाला एक्सटेंशन।"
+  }
+,
+  "popupColorSoftPurple": {
+    "message": "हल्का बैंगनी",
+    "description": "लाइट थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupColorSoftBlack": {
+    "message": "हल्का काला",
+    "description": "डार्क थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupColorBlueGray": {
+    "message": "नीला ग्रे",
+    "description": "डार्क थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupColorNavyDark": {
+    "message": "गहरा नीला",
+    "description": "डार्क थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupColorMintGreen": {
+    "message": "मिंट हरा",
+    "description": "लाइट थीम का पूर्वनिर्धारित रंग"
   }
 ,
   "extensionDescription": {
-    "message": "डुप्लिकेट Google Calendar इवेंट्स को एक इंद्रधनुष में मिलाता है और सप्ताहांत को रंगता है",
-    "description": "एक्सटेंशन की मुख्य कार्यक्षमता की व्याख्या करने वाला विवरण।"
+    "message": "दोहराए गए कैलेंडर इवेंट्स को इंद्रधनुष में मिलाता है और सप्ताहांत को रंगता है",
+    "description": "एक्सटेंशन की मुख्य कार्यक्षमता का विवरण।"
+  }
+,
+  "popupColorDefaultBlue": {
+    "message": "डिफ़ॉल्ट नीला",
+    "description": "लाइट थीम का पूर्वनिर्धारित रंग"
+  }
+,
+  "popupThemeSelect": {
+    "message": "थीम",
+    "description": "थीम चुनने का लेबल"
+  }
+,
+  "popupDarkThemeColor": {
+    "message": "सप्ताहांत रंग (डार्क थीम)",
+    "description": "डार्क थीम में सप्ताहांत का रंग चुनें"
+  }
+,
+  "popupColorCustom": {
+    "message": "कस्टम...",
+    "description": "अपना रंग चुनें"
   }
 
 }
