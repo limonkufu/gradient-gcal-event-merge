@@ -14,7 +14,12 @@
 // Constants section
 const CONSTANTS = {
   WEEKEND: {
-    BACKGROUND_COLOR: '#f1f6ff',
+    LIGHT: {
+      DEFAULT_COLOR: '#f1f6ff'
+    },
+    DARK: {
+      DEFAULT_COLOR: '#1a1a1a'
+    },
     DAY1: new Date(2021, 6, 3).toLocaleString('default', { weekday: 'long' })[0],
     DAY2: new Date(2021, 6, 4).toLocaleString('default', { weekday: 'long' })[0]
   },
@@ -31,17 +36,35 @@ const CONSTANTS = {
 const config = {
   settings: {
     gradientOpacity: CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY,
-    weekendsEnabled: true
+    weekendsEnabled: true,
+    theme: 'system',
+    lightThemeColor: CONSTANTS.WEEKEND.LIGHT.DEFAULT_COLOR,
+    darkThemeColor: CONSTANTS.WEEKEND.DARK.DEFAULT_COLOR
   },
 
   loadSettings: () => {
     return new Promise((resolve) => {
-      chrome.storage.sync.get(['gradientOpacity', 'weekendsEnabled'], (result) => {
+      chrome.storage.sync.get([
+        'gradientOpacity', 
+        'weekendsEnabled', 
+        'theme',
+        'lightThemeColor',
+        'darkThemeColor'
+      ], (result) => {
         config.settings.gradientOpacity = result.gradientOpacity || CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY;
         config.settings.weekendsEnabled = result.weekendsEnabled !== false;
+        config.settings.theme = result.theme || 'system';
+        config.settings.lightThemeColor = result.lightThemeColor || CONSTANTS.WEEKEND.LIGHT.DEFAULT_COLOR;
+        config.settings.darkThemeColor = result.darkThemeColor || CONSTANTS.WEEKEND.DARK.DEFAULT_COLOR;
         resolve();
       });
     });
+  },
+
+  getWeekendColor: () => {
+    const isDarkMode = config.settings.theme === 'dark' || 
+      (config.settings.theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    return isDarkMode ? config.settings.darkThemeColor : config.settings.lightThemeColor;
   }
 };
 
@@ -148,11 +171,12 @@ const eventHandlers = {
 // Weekend coloring functions
 const weekendHandlers = {
   colorWeekends: (node) => {
+    const weekendColor = config.getWeekendColor();
     const nodes = node.querySelectorAll("div[role='columnheader'],div[data-datekey]:not([jsaction])");
     for (const node of nodes) {
       if (node.getAttribute('role') === 'columnheader') {
         if (node.children[0].innerHTML[0] === CONSTANTS.WEEKEND.DAY1 || node.children[0].innerHTML[0] === CONSTANTS.WEEKEND.DAY2) {
-          node.style.backgroundColor = CONSTANTS.WEEKEND.BACKGROUND_COLOR;
+          node.style.backgroundColor = weekendColor;
         }
         continue;
       }
@@ -167,17 +191,18 @@ const weekendHandlers = {
       const dayOfWeek = date.getDay();
       
       if (dayOfWeek === 0 || dayOfWeek === 6) {
-        node.style.backgroundColor = CONSTANTS.WEEKEND.BACKGROUND_COLOR;
+        node.style.backgroundColor = weekendColor;
       }
     }
   },
 
   colorMiniCalendarWeekends: (node) => {
+    const weekendColor = config.getWeekendColor();
     const nodes = node.querySelectorAll("span[role='columnheader'],span[data-date]");
     for (const node of nodes) {
       if (node.getAttribute('role') === 'columnheader') {
         if (node.children[0].innerHTML[0] === CONSTANTS.WEEKEND.DAY1 || node.children[0].innerHTML[0] === CONSTANTS.WEEKEND.DAY2) {
-          node.style.backgroundColor = CONSTANTS.WEEKEND.BACKGROUND_COLOR;
+          node.style.backgroundColor = weekendColor;
         }
         continue;
       }
@@ -187,8 +212,8 @@ const weekendHandlers = {
       
       const dt = new Date(d.slice(0, 4), d.slice(4, 6) - 1, d.slice(6, 8));
       if (dt.getDay() === 6 || dt.getDay() === 0) {
-        node.style.backgroundColor = CONSTANTS.WEEKEND.BACKGROUND_COLOR;
-        node.children[0].style.backgroundColor = CONSTANTS.WEEKEND.BACKGROUND_COLOR;
+        node.style.backgroundColor = weekendColor;
+        node.children[0].style.backgroundColor = weekendColor;
       }
     }
   }
@@ -237,6 +262,15 @@ const init = async () => {
       chrome.storage.onChanged.addListener((changes) => {
         if (changes.gradientOpacity) {
           config.settings.gradientOpacity = changes.gradientOpacity.newValue;
+        }
+        if (changes.theme) {
+          config.settings.theme = changes.theme.newValue;
+        }
+        if (changes.lightThemeColor) {
+          config.settings.lightThemeColor = changes.lightThemeColor.newValue;
+        }
+        if (changes.darkThemeColor) {
+          config.settings.darkThemeColor = changes.darkThemeColor.newValue;
         }
         window.location.reload();
       });

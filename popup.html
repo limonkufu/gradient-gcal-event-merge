@@ -42,6 +42,115 @@
       border-top: 1px solid #ccc;
       margin: 5px 0;
     }
+    .setting-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .color-picker-wrapper {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .color-preview {
+      width: 24px;
+      height: 24px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="color"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .save-indicator {
+      opacity: 0;
+      color: #4CAF50;
+      font-size: 0.8em;
+      transition: opacity 0.3s ease;
+    }
+
+    .save-indicator.show {
+      opacity: 1;
+    }
+
+    .reset-color {
+      padding: 4px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #f5f5f5;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .reset-color:hover {
+      background: #e5e5e5;
+    }
+
+    .reset-color:active {
+      background: #d5d5d5;
+    }
+
+    .color-control {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .color-preset {
+      flex: 1;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .hex-input-wrapper {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0 6px;
+      background: white;
+    }
+
+    .hex-input-wrapper span {
+      color: #666;
+    }
+
+    .hex-input {
+      width: 60px;
+      border: none;
+      padding: 6px 4px;
+      font-family: monospace;
+      outline: none;
+    }
+
+    .color-preview {
+      width: 24px;
+      height: 24px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .save-indicator {
+      opacity: 0;
+      color: #4CAF50;
+      font-size: 0.8em;
+      transition: opacity 0.3s ease;
+    }
+
+    .save-indicator.show {
+      opacity: 1;
+    }
+
+    .hex-input.invalid {
+      color: #dc3545;
+    }
   </style>
 </head>
 <body>
@@ -64,6 +173,53 @@
       <div class="slider-container">
         <input type="range" id="gradientOpacity" min="0" max="1" step="0.05" />
         <span id="opacityValue" class="value"></span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="setting-group">
+      <label for="theme-select" id="themeSelectLabel"></label>
+      <select id="theme-select">
+        <option value="system" id="themeSystemOption"></option>
+        <option value="light" id="themeLightOption"></option>
+        <option value="dark" id="themeDarkOption"></option>
+      </select>
+    </div>
+    <div class="setting-group">
+      <label for="light-theme-color" id="lightThemeColorLabel"></label>
+      <div class="color-control">
+        <select id="light-color-preset" class="color-preset">
+          <option value="" id="colorCustomOption"></option>
+          <option value="#f1f6ff" id="colorDefaultBlueOption"></option>
+          <option value="#f5f5f5" id="colorLightGrayOption"></option>
+          <option value="#fff3e0" id="colorWarmBeigeOption"></option>
+          <option value="#f3e5f5" id="colorSoftPurpleOption"></option>
+          <option value="#e8f5e9" id="colorMintGreenOption"></option>
+        </select>
+        <div class="hex-input-wrapper">
+          <span>#</span>
+          <input type="text" id="light-hex-color" class="hex-input" maxlength="6" placeholder="f1f6ff">
+        </div>
+        <div class="color-preview" id="light-preview"></div>
+        <span class="save-indicator" id="light-saved">Saved!</span>
+      </div>
+    </div>
+    <div class="setting-group">
+      <label for="dark-theme-color" id="darkThemeColorLabel"></label>
+      <div class="color-control">
+        <select id="dark-color-preset" class="color-preset">
+          <option value="" id="colorCustomOptionDark"></option>
+          <option value="#1a1a1a" id="colorDefaultDarkOption"></option>
+          <option value="#2d2d2d" id="colorSoftBlackOption"></option>
+          <option value="#263238" id="colorBlueGrayOption"></option>
+          <option value="#1b1b24" id="colorNavyDarkOption"></option>
+          <option value="#2d2d2d" id="colorCharcoalOption"></option>
+        </select>
+        <div class="hex-input-wrapper">
+          <span>#</span>
+          <input type="text" id="dark-hex-color" class="hex-input" maxlength="6" placeholder="1a1a1a">
+        </div>
+        <div class="color-preview" id="dark-preview"></div>
+        <span class="save-indicator" id="dark-saved">Saved!</span>
       </div>
     </div>
   </div>
