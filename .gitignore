@@ -16,3 +16,7 @@ resources/.arch-internal-preview.css
 .arch-internal-preview.css
 
 gcal-multical-event-merge.zip
+
+# Build outputs
+dist/
+*.zip
