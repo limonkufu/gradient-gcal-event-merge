@@ -1,13 +1,23 @@
+'use strict';
+
+const DEFAULT_SETTINGS = Object.freeze({
+  enabled: true,
+  weekendsEnabled: true,
+  gradientOpacity: 0.75,
+  theme: 'system',
+  lightThemeColor: '#f1f6ff',
+  darkThemeColor: '#1a1a1a'
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Existing elements
   const enableExtension = document.getElementById('enableExtension');
   const enableWeekends = document.getElementById('enableWeekends');
   const gradientOpacity = document.getElementById('gradientOpacity');
   const opacityValue = document.getElementById('opacityValue');
   const themeSelect = document.getElementById('theme-select');
+  const status = document.getElementById('status');
 
-  // Color control elements
-  const elements = {
+  const colorControls = {
     light: {
       preset: document.getElementById('light-color-preset'),
       hex: document.getElementById('light-hex-color'),
@@ -22,134 +32,160 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Load all saved settings
-  chrome.storage.sync.get([
-    'enabled',
-    'weekendsEnabled',
-    'gradientOpacity',
-    'theme',
-    'lightThemeColor',
-    'darkThemeColor'
-  ], (result) => {
-    // Existing settings
-    enableExtension.checked = result.enabled !== false;
-    enableWeekends.checked = result.weekendsEnabled !== false;
-    gradientOpacity.value = result.gradientOpacity || 0.15;
-    opacityValue.textContent = gradientOpacity.value;
-    themeSelect.value = result.theme || 'system';
+  const translations = {
+    extensionTitle: 'extensionName',
+    enableText: 'popupEnableExtension',
+    weekendsText: 'popupEnableWeekends',
+    opacityLabel: 'popupGradientOpacity',
+    themeSelectLabel: 'popupThemeSelect',
+    themeSystemOption: 'popupThemeSystem',
+    themeLightOption: 'popupThemeLight',
+    themeDarkOption: 'popupThemeDark',
+    lightThemeColorLabel: 'popupLightThemeColor',
+    darkThemeColorLabel: 'popupDarkThemeColor',
+    colorCustomOption: 'popupColorCustom',
+    colorCustomOptionDark: 'popupColorCustom',
+    colorDefaultBlueOption: 'popupColorDefaultBlue',
+    colorLightGrayOption: 'popupColorLightGray',
+    colorWarmBeigeOption: 'popupColorWarmBeige',
+    colorSoftPurpleOption: 'popupColorSoftPurple',
+    colorMintGreenOption: 'popupColorMintGreen',
+    colorDefaultDarkOption: 'popupColorDefaultDark',
+    colorSoftBlackOption: 'popupColorSoftBlack',
+    colorBlueGrayOption: 'popupColorBlueGray',
+    colorNavyDarkOption: 'popupColorNavyDark',
+    colorCharcoalOption: 'popupColorCharcoal'
+  };
 
-    // Color settings
-    updateColor('light', result.lightThemeColor || '#f1f6ff');
-    updateColor('dark', result.darkThemeColor || '#1a1a1a');
+  document.documentElement.lang = chrome.i18n.getUILanguage();
+  document.documentElement.dir = chrome.i18n.getMessage('@@bidi_dir') || 'ltr';
+
+  for (const [elementId, messageKey] of Object.entries(translations)) {
+    const element = document.getElementById(elementId);
+    const message = chrome.i18n.getMessage(messageKey);
+    if (element && message) {
+      element.textContent = message;
+    }
+  }
+
+  const showStatus = (message, isError = false) => {
+    status.textContent = message;
+    status.classList.toggle('error', isError);
+  };
+
+  const saveSettings = (settings, onSaved) => {
+    chrome.storage.sync.set(settings, () => {
+      if (chrome.runtime.lastError) {
+        showStatus('Settings could not be saved. Please try again.', true);
+        return;
+      }
+
+      showStatus('');
+      onSaved?.();
+    });
+  };
+
+  const isValidHex = (hex) => /^[0-9A-F]{6}$/i.test(hex);
+
+  const showSaveIndicator = (element) => {
+    element.textContent = 'Saved';
+    element.classList.add('show');
+    window.setTimeout(() => {
+      element.classList.remove('show');
+      element.textContent = '';
+    }, 1500);
+  };
+
+  const renderColor = (theme, color, preservePreset = false) => {
+    const controls = colorControls[theme];
+    const hexColor = String(color).replace(/^#/, '').trim();
+    const isValid = isValidHex(hexColor);
+
+    if (!preservePreset) {
+      const normalizedColor = `#${hexColor}`.toLowerCase();
+      const presetExists = Array.from(controls.preset.options)
+        .some(({ value }) => value.toLowerCase() === normalizedColor);
+      controls.preset.value = presetExists ? normalizedColor : '';
+    }
+
+    controls.hex.value = hexColor;
+    controls.hex.classList.toggle('invalid', !isValid);
+    controls.hex.setAttribute('aria-invalid', String(!isValid));
+    if (isValid) {
+      controls.preview.style.backgroundColor = `#${hexColor}`;
+    }
+
+    return isValid ? `#${hexColor}` : null;
+  };
+
+  const saveColor = (theme, color, preservePreset = false) => {
+    const normalizedColor = renderColor(theme, color, preservePreset);
+    if (!normalizedColor) {
+      return;
+    }
+
+    saveSettings(
+      { [`${theme}ThemeColor`]: normalizedColor },
+      () => showSaveIndicator(colorControls[theme].saved)
+    );
+  };
+
+  chrome.storage.sync.get(DEFAULT_SETTINGS, (settings) => {
+    if (chrome.runtime.lastError) {
+      showStatus('Settings could not be loaded. Defaults are shown.', true);
+    }
+
+    const resolvedSettings = { ...DEFAULT_SETTINGS, ...settings };
+    enableExtension.checked = resolvedSettings.enabled;
+    enableWeekends.checked = resolvedSettings.weekendsEnabled;
+    gradientOpacity.value = resolvedSettings.gradientOpacity;
+    opacityValue.textContent = resolvedSettings.gradientOpacity;
+    themeSelect.value = resolvedSettings.theme;
+    renderColor('light', resolvedSettings.lightThemeColor);
+    renderColor('dark', resolvedSettings.darkThemeColor);
   });
 
-  // Existing event listeners
   enableExtension.addEventListener('change', () => {
-    chrome.storage.sync.set({ enabled: enableExtension.checked });
+    saveSettings({ enabled: enableExtension.checked });
   });
 
   enableWeekends.addEventListener('change', () => {
-    chrome.storage.sync.set({ weekendsEnabled: enableWeekends.checked });
+    saveSettings({ weekendsEnabled: enableWeekends.checked });
   });
 
   gradientOpacity.addEventListener('input', () => {
     opacityValue.textContent = gradientOpacity.value;
-    chrome.storage.sync.set({ gradientOpacity: parseFloat(gradientOpacity.value) });
+  });
+
+  gradientOpacity.addEventListener('change', () => {
+    saveSettings({ gradientOpacity: Number(gradientOpacity.value) });
   });
 
   themeSelect.addEventListener('change', () => {
-    chrome.storage.sync.set({ theme: themeSelect.value });
+    saveSettings({ theme: themeSelect.value });
   });
 
-  // Color control functions
-  function isValidHex(hex) {
-    return /^[0-9A-F]{6}$/i.test(hex);
-  }
+  for (const theme of ['light', 'dark']) {
+    const controls = colorControls[theme];
 
-  function showSaveIndicator(element) {
-    element.classList.add('show');
-    setTimeout(() => element.classList.remove('show'), 2000);
-  }
-
-  function updateColor(theme, color, skipPreset = false) {
-    const els = elements[theme];
-    const hexColor = color.replace('#', '');
-    
-    if (!skipPreset) {
-      els.preset.value = els.preset.querySelector(`option[value="#${hexColor}"]`) 
-        ? `#${hexColor}` 
-        : '';
-    }
-    
-    els.hex.value = hexColor;
-    els.preview.style.backgroundColor = `#${hexColor}`;
-    
-    if (isValidHex(hexColor)) {
-      els.hex.classList.remove('invalid');
-      chrome.storage.sync.set({ 
-        [`${theme}ThemeColor`]: `#${hexColor}` 
-      }, () => showSaveIndicator(els.saved));
-    } else {
-      els.hex.classList.add('invalid');
-    }
-  }
-
-  // Color control event listeners
-  ['light', 'dark'].forEach(theme => {
-    const els = elements[theme];
-
-    els.preset.addEventListener('change', (e) => {
-      if (e.target.value) {
-        updateColor(theme, e.target.value);
+    controls.preset.addEventListener('change', (event) => {
+      if (event.target.value) {
+        saveColor(theme, event.target.value);
       }
     });
 
-    els.hex.addEventListener('input', (e) => {
-      updateColor(theme, e.target.value, true);
+    controls.hex.addEventListener('input', (event) => {
+      renderColor(theme, event.target.value, true);
     });
 
-    els.hex.addEventListener('paste', (e) => {
-      e.preventDefault();
-      const paste = (e.clipboardData || window.clipboardData).getData('text');
-      const cleaned = paste.replace('#', '').trim();
-      els.hex.value = cleaned;
-      updateColor(theme, cleaned, true);
+    controls.hex.addEventListener('change', (event) => {
+      saveColor(theme, event.target.value, true);
     });
-  });
 
-  // Set up translations
-  const translations = {
-    // Existing translations
-    'enableText': 'popupEnableExtension',
-    'weekendsText': 'popupEnableWeekends',
-    'opacityLabel': 'popupGradientOpacity',
-    
-    // New translations
-    'themeSelectLabel': 'popupThemeSelect',
-    'themeSystemOption': 'popupThemeSystem',
-    'themeLightOption': 'popupThemeLight',
-    'themeDarkOption': 'popupThemeDark',
-    'lightThemeColorLabel': 'popupLightThemeColor',
-    'darkThemeColorLabel': 'popupDarkThemeColor',
-    'colorCustomOption': 'popupColorCustom',
-    'colorCustomOptionDark': 'popupColorCustom',
-    'colorDefaultBlueOption': 'popupColorDefaultBlue',
-    'colorLightGrayOption': 'popupColorLightGray',
-    'colorWarmBeigeOption': 'popupColorWarmBeige',
-    'colorSoftPurpleOption': 'popupColorSoftPurple',
-    'colorMintGreenOption': 'popupColorMintGreen',
-    'colorDefaultDarkOption': 'popupColorDefaultDark',
-    'colorSoftBlackOption': 'popupColorSoftBlack',
-    'colorBlueGrayOption': 'popupColorBlueGray',
-    'colorNavyDarkOption': 'popupColorNavyDark',
-    'colorCharcoalOption': 'popupColorCharcoal'
-  };
-
-  // Apply all translations
-  Object.entries(translations).forEach(([elementId, messageKey]) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.textContent = chrome.i18n.getMessage(messageKey) || element.textContent;
-    }
-  });
-}); 
+    controls.hex.addEventListener('paste', (event) => {
+      event.preventDefault();
+      const pastedText = (event.clipboardData || window.clipboardData).getData('text');
+      saveColor(theme, pastedText.replace(/^#/, '').trim(), true);
+    });
+  }
+});

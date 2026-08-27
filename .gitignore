@@ -20,3 +20,7 @@ gcal-multical-event-merge.zip
 # Build outputs
 dist/
 *.zip
+
+# Browser-test artifacts
+.playwright-cli/
+output/playwright/

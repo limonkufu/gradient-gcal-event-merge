@@ -55,7 +55,7 @@
   }
 ,
   "extensionName": {
-    "message": "Gradient Merge for Google Calendar™ Events",
+    "message": "Gradient Merge for Google Calendar™",
     "description": "Name of the extension that merges duplicate calendar events with gradients."
   }
 ,
@@ -85,7 +85,7 @@
   }
 ,
   "extensionDescription": {
-    "message": "Merges duplicate Google Calendar events into one rainbow and colors the weekends.",
+    "message": "Visually merges duplicate Google Calendar events and optionally highlights weekends.",
     "description": "Description explaining the extension's main functionality."
   }
 ,

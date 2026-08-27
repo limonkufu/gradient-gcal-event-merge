@@ -1,9 +1,9 @@
 #!/bin/bash
 
 declare -A FIELDS=(
-    ["extensionName,message"]="Gradient Merge for Google Calendar™ Events"
+    ["extensionName,message"]="Gradient Merge for Google Calendar™"
     ["extensionName,description"]="Name of the extension that merges duplicate calendar events with gradients."
-    ["extensionDescription,message"]="Merges duplicate Google Calendar events into one rainbow and colors the weekends."
+    ["extensionDescription,message"]="Visually merges duplicate Google Calendar events and optionally highlights weekends."
     ["extensionDescription,description"]="Description explaining the extension's main functionality."
     ["popupEnableExtension,message"]="Enable Extension"
     ["popupEnableExtension,description"]="Label for the extension enable/disable toggle switch"

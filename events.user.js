@@ -1,281 +1,324 @@
-// ==UserScript==
-// @name        Gradient Event Merge for Google Calendar™ (by @imightbeAmy and @karjna and @limonkufu)
-// @namespace   gradient-gcal-multical-event-merge
-// @include     https://www.google.com/calendar/*
-// @include     http://www.google.com/calendar/*
-// @include     https://calendar.google.com/*
-// @include     http://calendar.google.com/*
-// @version     1
-// @grant       none
-// ==/UserScript==
-
 'use strict';
 
-// Constants section
-const CONSTANTS = {
-  WEEKEND: {
-    LIGHT: {
-      DEFAULT_COLOR: '#f1f6ff'
-    },
-    DARK: {
-      DEFAULT_COLOR: '#1a1a1a'
-    },
-    DAY1: new Date(2021, 6, 3).toLocaleString('default', { weekday: 'long' })[0],
-    DAY2: new Date(2021, 6, 4).toLocaleString('default', { weekday: 'long' })[0]
-  },
-  SELECTORS: {
-    MAIN_CALENDAR: "[role='main'], [role='dialog']",
-    MINI_CALENDAR: "div[data-month], div[data-ical]"
-  },
-  STYLES: {
-    DEFAULT_GRADIENT_OPACITY: 0.75, // Default value if user hasn't set one
+const DEFAULT_SETTINGS = Object.freeze({
+  enabled: true,
+  weekendsEnabled: true,
+  gradientOpacity: 0.75,
+  theme: 'system',
+  lightThemeColor: '#f1f6ff',
+  darkThemeColor: '#1a1a1a'
+});
+
+const SELECTORS = Object.freeze({
+  MAIN_CALENDAR: "[role='main'], [role='dialog']",
+  MINI_CALENDAR: 'div[data-month], div[data-ical]',
+  EVENT: '[data-eventid][role="button"], [data-eventid] [role="button"]'
+});
+
+const WEEKEND_INITIALS = new Set([
+  new Date(2021, 6, 3).toLocaleString('default', { weekday: 'long' })[0],
+  new Date(2021, 6, 4).toLocaleString('default', { weekday: 'long' })[0]
+]);
+
+const settings = { ...DEFAULT_SETTINGS };
+const originalEventStyles = new WeakMap();
+const originalDotStyles = new WeakMap();
+let renderScheduled = false;
+
+const getWeekendColor = () => {
+  const usesDarkTheme = settings.theme === 'dark'
+    || (settings.theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  return usesDarkTheme ? settings.darkThemeColor : settings.lightThemeColor;
+};
+
+const colorWithOpacity = (color) => {
+  const rgb = color.match(/^rgba?\(([^)]+)\)$/i);
+  if (!rgb) {
+    return color;
+  }
+
+  const channels = rgb[1].split(',').slice(0, 3).map((channel) => channel.trim());
+  return channels.length === 3
+    ? `rgba(${channels.join(', ')}, ${settings.gradientOpacity})`
+    : color;
+};
+
+const gradientFor = (colors, angle) => (
+  `linear-gradient(${angle}deg, ${colors.map(colorWithOpacity).join(', ')})`
+);
+
+const captureStyle = (element, styleMap, properties) => {
+  if (!styleMap.has(element)) {
+    styleMap.set(
+      element,
+      Object.fromEntries(properties.map((property) => [property, element.style[property]]))
+    );
   }
 };
 
-// Add configuration management
-const config = {
-  settings: {
-    gradientOpacity: CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY,
-    weekendsEnabled: true,
-    theme: 'system',
-    lightThemeColor: CONSTANTS.WEEKEND.LIGHT.DEFAULT_COLOR,
-    darkThemeColor: CONSTANTS.WEEKEND.DARK.DEFAULT_COLOR
-  },
+const restoreStyle = (element, styleMap) => {
+  const originalStyle = styleMap.get(element);
+  if (!originalStyle) {
+    return;
+  }
 
-  loadSettings: () => {
-    return new Promise((resolve) => {
-      chrome.storage.sync.get([
-        'gradientOpacity', 
-        'weekendsEnabled', 
-        'theme',
-        'lightThemeColor',
-        'darkThemeColor'
-      ], (result) => {
-        config.settings.gradientOpacity = result.gradientOpacity || CONSTANTS.STYLES.DEFAULT_GRADIENT_OPACITY;
-        config.settings.weekendsEnabled = result.weekendsEnabled !== false;
-        config.settings.theme = result.theme || 'system';
-        config.settings.lightThemeColor = result.lightThemeColor || CONSTANTS.WEEKEND.LIGHT.DEFAULT_COLOR;
-        config.settings.darkThemeColor = result.darkThemeColor || CONSTANTS.WEEKEND.DARK.DEFAULT_COLOR;
-        resolve();
-      });
-    });
-  },
-
-  getWeekendColor: () => {
-    const isDarkMode = config.settings.theme === 'dark' || 
-      (config.settings.theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    return isDarkMode ? config.settings.darkThemeColor : config.settings.lightThemeColor;
+  for (const [property, value] of Object.entries(originalStyle)) {
+    element.style[property] = value;
   }
 };
 
-// Utility functions
-const utils = {
-  stripesGradient: (colors, width, angle) => {
-    const colorStrings = colors.map(color => 
-      color.toString().replace(')', `, ${config.settings.gradientOpacity})`).replace('rgb', 'rgba')
-    );
-    return `linear-gradient(${angle}deg,${colorStrings.join(',')})`;
-  },
-
-  dragType: (e) => parseInt(e.dataset.dragsourceType),
-
-  calculatePosition: (event, parentPosition) => ({
-    left: Math.max(event.getBoundingClientRect().left - parentPosition.left, 0),
-    right: parentPosition.right - event.getBoundingClientRect().right,
-  })
+const findEventDot = (event) => {
+  const dotContainer = event.querySelector('[role="button"] div:first-child');
+  return dotContainer?.querySelector('div') || null;
 };
 
-// Event handling functions
-const eventHandlers = {
-  mergeEventElements: (events) => {
-    events.sort((e1, e2) => utils.dragType(e1) - utils.dragType(e2));
-    const colors = events.map(
-      (event) =>
-        event.style.backgroundColor || 
-        event.style.borderColor || 
-        event.parentElement.style.borderColor
-    );
+const restoreEvent = (event) => {
+  restoreStyle(event, originalEventStyles);
+  const dot = findEventDot(event);
+  if (dot) {
+    restoreStyle(dot, originalDotStyles);
+  }
+};
 
-    const parentPosition = events[0].parentElement.getBoundingClientRect();
-    const positions = events.map((event) => {
-      event.originalPosition = event.originalPosition || utils.calculatePosition(event, parentPosition);
-      return event.originalPosition;
-    });
+const eventColor = (event) => (
+  event.style.backgroundColor
+  || event.style.borderColor
+  || event.parentElement?.style.borderColor
+  || ''
+);
 
-    const eventToKeep = events.shift();
-    events.forEach((event) => {
-      event.style.visibility = 'hidden';
-    });
+const mergeEventElements = (events) => {
+  events.sort((first, second) => (
+    (Number.parseInt(first.dataset.dragsourceType, 10) || 0)
+    - (Number.parseInt(second.dataset.dragsourceType, 10) || 0)
+  ));
 
-    if (eventToKeep.style.backgroundColor || eventToKeep.style.borderColor) {
-      eventToKeep.originalStyle = eventToKeep.originalStyle || {
-        backgroundImage: eventToKeep.style.backgroundImage,
-        backgroundSize: eventToKeep.style.backgroundSize,
-        left: eventToKeep.style.left,
-        right: eventToKeep.style.right,
-        visibility: eventToKeep.style.visibility,
-        width: eventToKeep.style.width,
-        border: eventToKeep.style.border,
-      };
-      
-      eventToKeep.style.backgroundImage = utils.stripesGradient(colors, 10, 45);
-      eventToKeep.style.backgroundSize = 'cover'; // Fix for gradient box creep
-      eventToKeep.style.backgroundColor = 'unset';
-      eventToKeep.style.left = Math.min(...positions.map((s) => s.left)) + 'px';
-      eventToKeep.style.right = Math.min(...positions.map((s) => s.right)) + 'px';
-      eventToKeep.style.visibility = 'visible';
-      eventToKeep.style.width = null;
-      eventToKeep.style.border = 'solid 1px #FFF';
-    } else {
-      const dots = eventToKeep.querySelector('[role="button"] div:first-child');
-      const dot = dots.querySelector('div');
-      dot.style.backgroundImage = utils.stripesGradient(colors, 4, 90);
-      dot.style.width = colors.length * 4 + 'px';
-      dot.style.borderWidth = 0;
-      dot.style.height = '8px';
+  const colors = events.map(eventColor).filter(Boolean);
+  if (colors.length < 2) {
+    return;
+  }
+
+  const parentBounds = events[0].parentElement?.getBoundingClientRect();
+  if (!parentBounds) {
+    return;
+  }
+
+  const positions = events.map((event) => {
+    const bounds = event.getBoundingClientRect();
+    return {
+      left: Math.max(bounds.left - parentBounds.left, 0),
+      right: Math.max(parentBounds.right - bounds.right, 0)
+    };
+  });
+
+  const [eventToKeep, ...eventsToHide] = events;
+  const eventStyleProperties = [
+    'backgroundColor',
+    'backgroundImage',
+    'backgroundSize',
+    'border',
+    'left',
+    'right',
+    'visibility',
+    'width'
+  ];
+
+  for (const event of events) {
+    captureStyle(event, originalEventStyles, eventStyleProperties);
+  }
+
+  for (const event of eventsToHide) {
+    event.style.visibility = 'hidden';
+  }
+
+  if (eventToKeep.style.backgroundColor || eventToKeep.style.borderColor) {
+    eventToKeep.style.backgroundImage = gradientFor(colors, 45);
+    eventToKeep.style.backgroundSize = 'cover';
+    eventToKeep.style.backgroundColor = 'unset';
+    eventToKeep.style.left = `${Math.min(...positions.map(({ left }) => left))}px`;
+    eventToKeep.style.right = `${Math.min(...positions.map(({ right }) => right))}px`;
+    eventToKeep.style.visibility = 'visible';
+    eventToKeep.style.width = '';
+    eventToKeep.style.border = 'solid 1px #fff';
+    return;
+  }
+
+  const dot = findEventDot(eventToKeep);
+  if (!dot) {
+    for (const event of eventsToHide) {
+      restoreStyle(event, originalEventStyles);
     }
-  },
-
-  merge: (mainCalendar) => {
-    const eventSets = {};
-    const days = mainCalendar.querySelectorAll('[role="gridcell"]');
-    days.forEach((day, index) => {
-      const events = Array.from(day.querySelectorAll('[data-eventid][role="button"], [data-eventid] [role="button"]'));
-      events.forEach((event) => {
-        const eventTitleEls = event.querySelectorAll('[aria-hidden="true"]');
-        if (!eventTitleEls.length) return;
-        let eventKey = Array.from(eventTitleEls)
-          .map((el) => el.textContent)
-          .join('')
-          .replace(/\s+/g, '');
-        eventKey = index + '_' + eventKey + event.style.height;
-        eventSets[eventKey] = eventSets[eventKey] || [];
-        eventSets[eventKey].push(event);
-      });
-    });
-
-    Object.values(eventSets).forEach((events) => {
-      if (events.length > 1) {
-        eventHandlers.mergeEventElements(events);
-      } else {
-        events.forEach((event) => {
-          for (let k in event.originalStyle) {
-            event.style[k] = event.originalStyle[k];
-          }
-        });
-      }
-    });
+    return;
   }
+
+  captureStyle(dot, originalDotStyles, [
+    'backgroundImage',
+    'borderWidth',
+    'height',
+    'width'
+  ]);
+  dot.style.backgroundImage = gradientFor(colors, 90);
+  dot.style.width = `${colors.length * 4}px`;
+  dot.style.borderWidth = '0';
+  dot.style.height = '8px';
 };
 
-// Weekend coloring functions
-const weekendHandlers = {
-  colorWeekends: (node) => {
-    const weekendColor = config.getWeekendColor();
-    const nodes = node.querySelectorAll("div[role='columnheader'],div[data-datekey]:not([jsaction])");
-    for (const node of nodes) {
-      if (node.getAttribute('role') === 'columnheader') {
-        if (node.children[0].innerHTML[0] === CONSTANTS.WEEKEND.DAY1 || node.children[0].innerHTML[0] === CONSTANTS.WEEKEND.DAY2) {
-          node.style.backgroundColor = weekendColor;
-        }
+const mergeCalendarEvents = (calendar) => {
+  const eventSets = new Map();
+  const days = calendar.querySelectorAll('[role="gridcell"]');
+
+  days.forEach((day, dayIndex) => {
+    const events = Array.from(day.querySelectorAll(SELECTORS.EVENT));
+    for (const event of events) {
+      restoreEvent(event);
+
+      const titleElements = event.querySelectorAll('[aria-hidden="true"]');
+      if (!titleElements.length) {
         continue;
       }
-      
-      const datekey = parseInt(node.getAttribute('data-datekey'));
-      if (!datekey) continue;
-      
-      const year = datekey >> 9;
-      const month = (datekey & 511) >> 5;
-      const day = datekey & 31;
-      const date = new Date(1970 + year, month - 1, day);
-      const dayOfWeek = date.getDay();
-      
-      if (dayOfWeek === 0 || dayOfWeek === 6) {
-        node.style.backgroundColor = weekendColor;
-      }
-    }
-  },
 
-  colorMiniCalendarWeekends: (node) => {
-    const weekendColor = config.getWeekendColor();
-    const nodes = node.querySelectorAll("span[role='columnheader'],span[data-date]");
-    for (const node of nodes) {
-      if (node.getAttribute('role') === 'columnheader') {
-        if (node.children[0].innerHTML[0] === CONSTANTS.WEEKEND.DAY1 || node.children[0].innerHTML[0] === CONSTANTS.WEEKEND.DAY2) {
-          node.style.backgroundColor = weekendColor;
-        }
-        continue;
-      }
-      
-      const d = node.getAttribute('data-date');
-      if (!d) continue;
-      
-      const dt = new Date(d.slice(0, 4), d.slice(4, 6) - 1, d.slice(6, 8));
-      if (dt.getDay() === 6 || dt.getDay() === 0) {
+      const renderedTitle = Array.from(titleElements)
+        .map((element) => element.textContent || '')
+        .join('')
+        .replace(/\s+/g, '');
+      const eventKey = `${dayIndex}:${renderedTitle}:${event.style.height}`;
+      const matchingEvents = eventSets.get(eventKey) || [];
+      matchingEvents.push(event);
+      eventSets.set(eventKey, matchingEvents);
+    }
+  });
+
+  for (const events of eventSets.values()) {
+    if (events.length > 1) {
+      mergeEventElements(events);
+    }
+  }
+};
+
+const colorCalendarWeekends = (calendar) => {
+  const weekendColor = getWeekendColor();
+  const nodes = calendar.querySelectorAll("div[role='columnheader'], div[data-datekey]:not([jsaction])");
+
+  for (const node of nodes) {
+    if (node.getAttribute('role') === 'columnheader') {
+      const initial = node.textContent?.trim()[0];
+      if (initial && WEEKEND_INITIALS.has(initial)) {
         node.style.backgroundColor = weekendColor;
-        node.children[0].style.backgroundColor = weekendColor;
+      }
+      continue;
+    }
+
+    const dateKey = Number.parseInt(node.getAttribute('data-datekey'), 10);
+    if (!dateKey) {
+      continue;
+    }
+
+    const year = dateKey >> 9;
+    const month = (dateKey & 511) >> 5;
+    const day = dateKey & 31;
+    const dayOfWeek = new Date(1970 + year, month - 1, day).getDay();
+    if (dayOfWeek === 0 || dayOfWeek === 6) {
+      node.style.backgroundColor = weekendColor;
+    }
+  }
+};
+
+const colorMiniCalendarWeekends = (calendar) => {
+  const weekendColor = getWeekendColor();
+  const nodes = calendar.querySelectorAll("span[role='columnheader'], span[data-date]");
+
+  for (const node of nodes) {
+    if (node.getAttribute('role') === 'columnheader') {
+      const initial = node.textContent?.trim()[0];
+      if (initial && WEEKEND_INITIALS.has(initial)) {
+        node.style.backgroundColor = weekendColor;
+      }
+      continue;
+    }
+
+    const dateText = node.getAttribute('data-date');
+    if (!dateText || dateText.length < 8) {
+      continue;
+    }
+
+    const date = new Date(
+      Number.parseInt(dateText.slice(0, 4), 10),
+      Number.parseInt(dateText.slice(4, 6), 10) - 1,
+      Number.parseInt(dateText.slice(6, 8), 10)
+    );
+    if (date.getDay() === 0 || date.getDay() === 6) {
+      node.style.backgroundColor = weekendColor;
+      if (node.firstElementChild) {
+        node.firstElementChild.style.backgroundColor = weekendColor;
       }
     }
   }
 };
 
-// Observer setup
-const observerSetup = {
-  initializeObservers: () => {
-    const mainObserver = new MutationObserver((mutations) => {
-      mutations
-        .map(mutation => mutation.addedNodes[0] || mutation.target)
-        .filter(node => node.matches && node.matches(CONSTANTS.SELECTORS.MAIN_CALENDAR))
-        .forEach(node => {
-          eventHandlers.merge(node);
-          if (config.settings.weekendsEnabled) {
-            weekendHandlers.colorWeekends(node);
-          }
-        });
-    });
+const render = () => {
+  renderScheduled = false;
+  for (const calendar of document.querySelectorAll(SELECTORS.MAIN_CALENDAR)) {
+    mergeCalendarEvents(calendar);
+    if (settings.weekendsEnabled) {
+      colorCalendarWeekends(calendar);
+    }
+  }
 
-    const miniObserver = new MutationObserver((mutations) => {
-      if (!config.settings.weekendsEnabled) return;
-      
-      mutations
-        .map(mutation => mutation.addedNodes[0] || mutation.target)
-        .filter(node => node.matches && node.matches(CONSTANTS.SELECTORS.MINI_CALENDAR))
-        .forEach(weekendHandlers.colorMiniCalendarWeekends);
-    });
-
-    return { mainObserver, miniObserver };
+  if (settings.weekendsEnabled) {
+    for (const miniCalendar of document.querySelectorAll(SELECTORS.MINI_CALENDAR)) {
+      colorMiniCalendarWeekends(miniCalendar);
+    }
   }
 };
 
-// Initialize application
-const init = async () => {
-  setTimeout(async () => {
-    chrome.storage.local.get('disabled', async storage => {
-      if (!storage.disabled) {
-        await config.loadSettings();
-        const { mainObserver, miniObserver } = observerSetup.initializeObservers();
-        mainObserver.observe(document.body, { childList: true, subtree: true, attributes: true });
-        miniObserver.observe(document.body, { childList: true, subtree: true, attributes: true });
-      }
-      
-      // Reload when settings change
-      chrome.storage.onChanged.addListener((changes) => {
-        if (changes.gradientOpacity) {
-          config.settings.gradientOpacity = changes.gradientOpacity.newValue;
-        }
-        if (changes.theme) {
-          config.settings.theme = changes.theme.newValue;
-        }
-        if (changes.lightThemeColor) {
-          config.settings.lightThemeColor = changes.lightThemeColor.newValue;
-        }
-        if (changes.darkThemeColor) {
-          config.settings.darkThemeColor = changes.darkThemeColor.newValue;
-        }
-        window.location.reload();
-      });
-    });
-  }, 10);
+const scheduleRender = () => {
+  if (renderScheduled) {
+    return;
+  }
+
+  renderScheduled = true;
+  window.requestAnimationFrame(render);
 };
 
-init();
+const initialize = async () => {
+  Object.assign(settings, await chrome.storage.sync.get(DEFAULT_SETTINGS));
+
+  chrome.storage.onChanged.addListener((changes, areaName) => {
+    if (areaName !== 'sync') {
+      return;
+    }
+
+    for (const key of Object.keys(DEFAULT_SETTINGS)) {
+      if (changes[key]) {
+        settings[key] = changes[key].newValue ?? DEFAULT_SETTINGS[key];
+      }
+    }
+
+    if (changes.enabled || changes.weekendsEnabled) {
+      window.location.reload();
+      return;
+    }
+
+    scheduleRender();
+  });
+
+  if (!settings.enabled) {
+    return;
+  }
+
+  const observer = new MutationObserver(scheduleRender);
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  const colorScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  colorScheme.addEventListener('change', () => {
+    if (settings.theme === 'system') {
+      scheduleRender();
+    }
+  });
+
+  scheduleRender();
+};
+
+initialize().catch((error) => {
+  console.error('Gradient Merge could not initialize.', error);
+});

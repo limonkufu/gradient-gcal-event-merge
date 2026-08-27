@@ -1,6 +1,22 @@
-const getSetting = () => new Promise(res => chrome.storage.local.get('disabled', (s) => res(s.disabled)));
-const setIcon = (disabled) => chrome.action.setIcon({
-  path: disabled ? "icon-disabled.png" : "icon.png"
+const updateActionIcon = async () => {
+  const { enabled = true } = await chrome.storage.sync.get('enabled');
+  await chrome.action.setIcon({
+    path: enabled ? 'icon.png' : 'icon-disabled.png'
+  });
+};
+
+const safelyUpdateActionIcon = () => {
+  updateActionIcon().catch((error) => {
+    console.error('Unable to update the extension icon.', error);
+  });
+};
+
+chrome.runtime.onInstalled.addListener(safelyUpdateActionIcon);
+chrome.runtime.onStartup.addListener(safelyUpdateActionIcon);
+chrome.storage.onChanged.addListener((changes, areaName) => {
+  if (areaName === 'sync' && changes.enabled) {
+    safelyUpdateActionIcon();
+  }
 });
 
-getSetting().then(setIcon);
+safelyUpdateActionIcon();

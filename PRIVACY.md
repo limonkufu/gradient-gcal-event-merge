@@ -1,102 +1,74 @@
 # Privacy Policy
 
-**Gradient Merge for Google Calendar**
+**Gradient Merge for Google Calendar™**
 
-*Last updated: January 2025*
-
-## Overview
-
-Gradient Merge for Google Calendar ("the Extension") is committed to protecting your privacy. This privacy policy explains what information the Extension collects, how it is used, and what choices you have.
-
-**In short: We do not collect, transmit, or share any personal data.**
-
-## Data Collection
-
-### What We DO NOT Collect
-
-The Extension does NOT collect:
-- Calendar events, titles, descriptions, or attendees
-- Personal information or account details
-- Browsing history or activity
-- Analytics or usage data
-- Any data for advertising purposes
-
-### What We Store Locally
-
-The Extension stores only your preferences using your browser's built-in storage API:
-- Extension enabled/disabled state
-- Weekend highlighting preference
-- Gradient opacity setting
-- Theme preference (light/dark/system)
-- Weekend highlight colors
-
-This data is stored locally in your browser and may sync across your devices through your browser's built-in sync feature (e.g., Chrome Sync), which is controlled by your browser settings.
-
-## Data Transmission
-
-**The Extension does not transmit any data to external servers.**
-
-- No data is sent to us or any third parties
-- No analytics or tracking services are used
-- No remote code is loaded or executed
-- All processing happens locally in your browser
-
-## Permissions
-
-The Extension requests minimal permissions:
-
-| Permission | Purpose |
-|------------|---------|
-| `storage` | Save your preferences locally |
-| Access to Google Calendar pages | Modify visual appearance of overlapping events |
-
-The Extension only operates on Google Calendar (`calendar.google.com` and `www.google.com/calendar`). It cannot access any other websites.
-
-## How the Extension Works
-
-The Extension modifies only the visual styling of Google Calendar in your browser. It:
-- Detects visually overlapping calendar events on the page
-- Applies gradient backgrounds to indicate multiple simultaneous events
-- Optionally highlights weekends with customizable colors
-
-**Important:** The Extension reads the visual layout of calendar elements to apply styling. It does NOT access, read, or process the content of your calendar events (titles, descriptions, times, attendees, etc.).
-
-## Third Parties
-
-The Extension does not:
-- Share data with third parties
-- Include third-party analytics
-- Use advertising networks
-- Integrate with external services
-
-## Your Choices
-
-You can:
-- Disable the Extension at any time through browser settings or the Extension popup
-- Clear stored preferences by removing and reinstalling the Extension
-- Control browser sync settings to prevent preferences from syncing across devices
-
-## Children's Privacy
-
-The Extension does not knowingly collect any information from children under 13 years of age.
-
-## Changes to This Policy
-
-We may update this privacy policy from time to time. Any changes will be reflected in the "Last updated" date above.
-
-## Contact
-
-If you have questions about this privacy policy, please open an issue on our GitHub repository:
-
-https://github.com/nickhudkins/gradient-gcal-event-merge
+Last updated: August 27, 2026
 
 ## Summary
 
-| Question | Answer |
-|----------|--------|
-| Do you collect personal data? | No |
-| Do you sell data? | No |
-| Do you use analytics? | No |
-| Do you access calendar content? | No |
-| Do you communicate with external servers? | No |
-| What is stored? | Only your visual preferences, locally |
+Gradient Merge processes a small amount of Google Calendar page content locally to provide its visible event-merging feature. It does not retain or transmit Calendar content, has no analytics or advertising, and has no developer-operated server.
+
+## Data handled by the extension
+
+### Rendered Google Calendar content
+
+While a Google Calendar tab is open, the extension accesses only the page elements needed for its user-facing purpose:
+
+- Rendered event label text, including the title and any time or label fragments present in the event element, used temporarily to identify duplicate visible events
+- Event colors, dimensions, and positions, used to draw the merged gradient
+- Rendered dates and weekday headings, used to apply optional weekend highlighting
+
+This processing happens in memory in the current tab. Event labels and other Calendar page content are not copied to browser storage, retained after use, transmitted, or made available to the developer or any other person.
+
+The extension does not use the Google Calendar API or request account credentials, authentication tokens, or Calendar data that is not already present in the rendered page elements used by the feature.
+
+### Extension preferences
+
+The extension stores these user-selected preferences with the browser's `storage.sync` API:
+
+- Whether the extension is enabled
+- Whether weekend highlighting is enabled
+- Gradient opacity
+- Theme selection
+- Light and dark weekend colors
+
+The developer cannot access these preferences. Chrome may sync them through the user's Google account when Chrome Sync is enabled; that syncing is performed by the browser and is governed by the user's browser and Google account settings.
+
+## Collection, transmission, and sharing
+
+The extension does not make network requests and does not send data to the developer or to third parties. It includes no analytics, tracking, advertising, or remote code. The developer does not sell, share, or allow human access to Calendar content or extension preferences.
+
+## Retention and deletion
+
+Rendered Calendar content is not retained. Preferences remain in browser storage until the user changes them, clears the extension's stored data, or uninstalls the extension. Synced copies are controlled through the user's Chrome Sync settings.
+
+## Permissions
+
+| Access | Purpose |
+| --- | --- |
+| `storage` | Save the visual preferences listed above |
+| `https://calendar.google.com/*` | Run the packaged content script on Google Calendar so it can provide event merging and weekend highlighting |
+
+The extension does not request access to other sites.
+
+## Limited Use disclosure
+
+Gradient Merge's use of information obtained from Google Calendar complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide or improve the extension's disclosed single purpose. It is not transferred for advertising, profiling, creditworthiness, lending, or any unrelated purpose, and humans are not allowed to read it.
+
+## Security
+
+All executable code is included in the extension package. The extension does not download or execute remote code and does not transmit Calendar content.
+
+## Children's privacy
+
+The extension does not knowingly collect personal information from children. Its local-only data handling is the same for every user.
+
+## Changes to this policy
+
+Material changes to data handling will be disclosed before the changed practice begins, as required by Chrome Web Store policy. The date above identifies the current version of this policy.
+
+## Contact
+
+For privacy questions or requests, open an issue in the [project's GitHub repository](https://github.com/limonkufu/gradient-gcal-event-merge/issues).
+
+Google Calendar is a trademark of Google LLC. Use of this trademark is subject to Google Permissions. This extension is independently developed and is not affiliated with or endorsed by Google.

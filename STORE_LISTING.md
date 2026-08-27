@@ -1,69 +1,120 @@
-# Chrome Web Store - Privacy Practices
+# Chrome Web Store release copy and checklist
 
-Use these texts when filling out the Privacy Practices tab in the Chrome Web Store developer dashboard.
+The dashboard, public privacy policy, store listing, and packaged behavior must remain consistent. Re-check this document whenever data handling, permissions, or visible functionality changes.
 
----
+## Listing
 
-## Single Purpose Description
+### Title
 
-```
-This extension enhances Google Calendar's visual display by merging overlapping events from multiple calendars into a single event with a gradient background, making it easier to see schedule conflicts at a glance.
-```
-
----
-
-## Host Permission Justification
-
-**Permission:** `https://www.google.com/calendar/*` and `https://calendar.google.com/*`
-
-```
-Host permissions are required to inject content scripts into Google Calendar pages. The extension modifies the visual appearance of calendar events by applying gradient backgrounds to overlapping events and optionally highlighting weekends. These permissions are limited exclusively to Google Calendar domains and are necessary for the core functionality of the extension. No data is collected, transmitted, or shared - all processing occurs locally in the browser.
+```text
+Gradient Merge for Google Calendar™
 ```
 
----
+### Summary
 
-## Storage Permission Justification
-
-**Permission:** `storage`
-
-```
-The storage permission is used to save user preferences locally, including: extension enabled/disabled state, gradient opacity settings, weekend highlighting preference, theme selection (light/dark/system), and custom color choices. All data is stored locally using Chrome's sync storage API to persist settings across browser sessions and sync across the user's devices. No data is transmitted to external servers.
+```text
+Visually merge duplicate Google Calendar events into one gradient block and optionally highlight weekends.
 ```
 
----
+### Detailed description
 
-## Remote Code Justification
+```text
+See schedule conflicts at a glance when the same event appears on multiple calendars. Gradient Merge combines duplicate events already visible in Google Calendar into one gradient block while preserving each calendar's color.
 
-```
-This extension does not use any remote code. All JavaScript is bundled within the extension package and no external scripts are loaded or executed. The extension operates entirely offline after installation.
-```
+Features:
+• Merge duplicate visible events into a color gradient
+• Adjust gradient opacity
+• Optionally highlight weekends
+• Choose light, dark, or system-aware weekend colors
+• Sync visual preferences through browser storage
 
----
+Privacy: To identify duplicate events, the extension processes rendered event label text, colors, and layout locally in the current Google Calendar tab. Calendar content is never stored or transmitted. The extension has no analytics, ads, tracking, or developer-operated external servers. Visual preferences may be synced by Chrome according to the user's Chrome Sync settings.
 
-## Data Usage Certification
-
-When asked about data collection, select:
-
-- **"I do not collect or use any user data"** (if this option is available)
-
-Or if you must describe data handling:
-
-```
-This extension does not collect, transmit, or share any user data. All functionality operates locally within the browser. User preferences are stored using Chrome's built-in storage API and remain on the user's device or synced through their Google account (via Chrome sync). The extension does not communicate with any external servers.
+Google Calendar is a trademark of Google LLC. Use of this trademark is subject to Google Permissions. This extension is independently developed and is not affiliated with or endorsed by Google.
 ```
 
----
+### Category
 
-# Firefox Add-ons Store
+`Productivity`
 
-## Summary (for AMO listing)
+### Suggested URLs
 
+- Homepage: `https://github.com/limonkufu/gradient-gcal-event-merge`
+- Support: `https://github.com/limonkufu/gradient-gcal-event-merge/issues`
+- Privacy policy: use a publicly hosted rendering of `PRIVACY.md`, for example `https://github.com/limonkufu/gradient-gcal-event-merge/blob/master/PRIVACY.md`
+
+## Single purpose
+
+```text
+This extension improves the visual presentation of Google Calendar by combining duplicate visible events into a gradient and highlighting weekends with user-selected colors.
 ```
-Merges overlapping Google Calendar events from multiple calendars into a single visual block with gradient backgrounds. Helps you quickly identify schedule conflicts. Includes optional weekend highlighting and customizable themes.
+
+## Permission and site-access justifications
+
+### Google Calendar site access
+
+```text
+The packaged content script runs only on https://calendar.google.com/*. This access is required to find duplicate events already rendered in the current Calendar view, combine their visible colors into a gradient, and optionally highlight weekends. Calendar page content is processed only in memory in the current tab and is never stored or transmitted.
 ```
 
-## Privacy Policy (if required)
+The manifest intentionally does not declare `host_permissions`; static `content_scripts.matches` supplies the narrowly scoped site access needed by this feature.
 
+### `storage`
+
+```text
+The storage permission saves the user's enabled state, weekend-highlighting choice, gradient opacity, theme, and custom colors with chrome.storage.sync. These preferences may sync through Chrome according to the user's Chrome Sync settings. Calendar event content is never written to storage.
 ```
-Gradient Merge for Google Calendar does not collect, store, or transmit any personal data. All user preferences (theme, colors, opacity settings) are stored locally in your browser using the WebExtension storage API. The extension only accesses Google Calendar web pages to modify their visual appearance and does not read, collect, or share any calendar data.
+
+## Privacy practices tab
+
+Do not select a blanket statement that the extension does not use user data: Google policy treats local page-content processing as data handling.
+
+### Data type
+
+Select **Website content** and describe it as follows:
+
+```text
+The extension temporarily processes rendered Google Calendar event label text (including the title and any time or label fragments present in the event element), colors, positions, dates, and weekday headings in the current tab. This is strictly necessary to identify duplicate visible events, draw their merged gradient, and optionally highlight weekends. Calendar content is not retained, written to storage, transmitted, or made available to the developer or any third party.
 ```
+
+Also disclose the non-sensitive visual preferences saved through `storage.sync` in the listing and privacy policy. Do not claim that sync preferences stay only on the device, because Chrome may sync them through the user's Google account.
+
+### Limited Use certification
+
+Certify only while all of these remain true:
+
+- Data use is limited to the disclosed event-merging and weekend-highlighting purpose.
+- No Calendar content is sold or transferred.
+- No Calendar content is used for advertising, profiling, creditworthiness, or lending.
+- Humans cannot access Calendar content.
+- The public privacy policy is accurate and linked in the dashboard.
+
+Limited Use statement for the public privacy page:
+
+```text
+Gradient Merge's use of information obtained from Google Calendar complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide or improve the extension's disclosed single purpose. It is not transferred for advertising, profiling, creditworthiness, lending, or any unrelated purpose, and humans are not allowed to read it.
+```
+
+## Remote code
+
+```text
+This Manifest V3 extension does not use remote hosted code. All JavaScript is readable and included in the submitted package. It does not load external scripts, WebAssembly, or code-like configuration, and it does not use eval or dynamic code generation.
+```
+
+## Required assets
+
+- Store icon: `icon-large.png` — 128x128
+- Screenshot: `images/examples.png` — 1280x800
+- Small promo tile: `images/small-tile.png` — 440x280
+- Marquee tile: `images/marquee.png` — 1400x560 (optional unless used for featuring)
+
+Before upload, confirm every screenshot represents the current UI and functionality. The build validator checks the asset dimensions but cannot check whether screenshots are current or visually accurate.
+
+## Release checklist
+
+1. Run `npm run check`.
+2. Smoke-test week and month views on the current Google Calendar UI.
+3. Verify enable/disable, weekend highlighting, opacity, theme, custom colors, and preference persistence.
+4. Run `npm run build` and upload `dist/gradient-merge-chrome-v<version>.zip`.
+5. Confirm the dashboard listing, Website content disclosure, permission justifications, Limited Use certification, and privacy-policy URL match this release.
+6. Confirm the developer account has 2-Step Verification enabled.
